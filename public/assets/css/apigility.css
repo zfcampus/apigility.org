@@ -1,6 +1,8 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
+  /* Move down content because we have a fixed navbar that is 50px tall.
+   * Not necessary as navbar is currently disabled.
   padding-top: 50px;
+   */
   padding-bottom: 20px;
 }
 
@@ -14,6 +16,7 @@ body {
 
 .jumbotron {
     background-color: #4B70A2;
+    text-align: center;
 }
 
 .jumbotron h1 {
@@ -22,4 +25,8 @@ body {
 
 .ag h2 {
     color: #004000;
+}
+
+footer {
+    text-align: center;
 }
