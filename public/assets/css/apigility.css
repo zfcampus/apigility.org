@@ -15,12 +15,16 @@ body {
 }
 
 .jumbotron {
-    background-color: #4B70A2;
+    background-color: #0c0c56;
     text-align: center;
 }
 
 .jumbotron h1 {
     color: #5AC75A;
+}
+
+.jumbotron p {
+    color: #63af44;
 }
 
 .ag h2 {
