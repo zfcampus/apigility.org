@@ -31,6 +31,12 @@ body {
     color: #004000;
 }
 
+.ag .video {
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+}
+
 footer {
     text-align: center;
 }
