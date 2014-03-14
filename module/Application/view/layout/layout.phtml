@@ -1,0 +1,60 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+	<?php echo $this->headTitle('Apigility')->setSeparator(' - ')->setAutoEscape(false) ?>
+	<?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge') ?>
+
+	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                     ->prependStylesheet($this->basePath() . '/css/font.css')
+                     ->prependStylesheet($this->basePath() . '/css/screen.css') ?>
+                     
+    <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/modernizr-2.js') ?>
+</head>
+<body class="wrap">
+	<a href="<?php echo $this->layout()->forkme ?>"><img
+		style="position: absolute; top: 0; right: 0; border: 0;"
+		src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
+		alt="Fork me on GitHub"
+		data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+	<header>
+		<nav class="mobile-nav show-on-mobiles">
+			<?php echo $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
+		</nav>
+		<div class="grid">
+			<div class="unit one-third center-on-mobiles">
+				<h1>
+					<a href="http://apigility.org/"> <span>Apigility</span> <img src="<?php echo $this->basePath() ?>/img/ag-hero.png" alt="">
+					</a>
+				</h1>
+			</div>
+			<nav class="main-nav unit two-thirds hide-on-mobiles">
+				<?php echo $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
+			</nav>
+		</div>
+	</header>
+				
+	<?php echo $this->content ?>
+	
+	<footer>
+		<div class="grid">
+			<div class="unit one-third center-on-mobiles">
+				<p>
+					&copy; 2013-2104 by <a href="http://www.zend.com">Zend Technologies</a>,
+					Ltd. All rights reserved.
+				</p>
+			</div>
+			<div class="unit two-thirds align-right center-on-mobiles">
+				<p>
+					Proudly built with <a href="http://framework.zend.com"><img	src="<?php echo $this->basePath() ?>/img/zf.png"></a>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+    <?php echo $this->inlineScript()?>
+</body>
+</html>

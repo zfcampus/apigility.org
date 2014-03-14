@@ -1,0 +1,17 @@
+<aside>
+<?php foreach ($this->aside as $key => $value): ?>
+	<?php if (!empty($key)): ?>
+		<h4><?php echo $key ?></h4>
+	<?php endif; ?>
+	<ul>
+	<?php foreach ($value as $name => $link): ?>
+		<?php if ($link === $this->current): ?>
+			<li class="current">
+		<?php else : ?>
+			<li>
+		<?php endif; ?>
+		<a href="<?php echo $link ?>"><?php echo $name ?></a></li>	
+	<?php endforeach; ?>
+	</ul>
+<?php endforeach; ?>
+</aside>

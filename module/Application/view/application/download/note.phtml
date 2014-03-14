@@ -1,0 +1,27 @@
+<section class="docs">
+	<div class="grid" style="margin-top:30px">
+		<div class="unit four-fifths">
+			<article>
+				<div class="post-content">
+					<h1>Release note <?php echo $this->version ?></h1>
+					<p>Fixes two critical issues in authentication/authorization reported against 0.9.0:
+
+    				<ul>
+    					<li><a href="https://github.com/zfcampus/zf-oauth2/issues/27">zfcampus/zfoauth2#27</a> reported an inability to save OAuth2 adapter details from the Apigility admin
+    UI. These are now corrected.</li>
+    					<li>A <a href="https://groups.google.com/a/zend.com/d/msgid/apigility-users/b7723f69-e4cc-4619-84d8-c3dd8c1f93a5%40zend.com">report on the apigility-users mailing list</a> indicated that authorizations performed against REST entities were not working correctly.
+    					 This was due to an incomplete change from "resource" to "entity" (as noted in the 0.9.0 release notes); the situation is now corrected.</li>
+    				</ul>	 
+					</p>
+				</div>
+			</article>
+		</div>
+		<div class="unit one-fifth hide-on-mobiles">
+			<?php echo $this->partial('layout/aside', array(
+					'aside'   => $this->aside,
+					'current' => $this->current
+			)) ?>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
