@@ -1,0 +1,22 @@
+<section class="docs">
+	<div class="grid" style="margin-top:30px">
+		<div class="unit four-fifths">
+			<article>
+				<div class="post-content">
+					<h1><?php echo $this->version ?> Changelog</h1>
+
+                    <?php echo $this->markdown($this->changelog) ?>
+				</div>
+			</article>
+		</div>
+
+		<div class="unit one-fifth hide-on-mobiles">
+			<?php echo $this->partial('layout/aside', array(
+					'aside'   => $this->aside,
+					'current' => $this->current
+			)) ?>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</section>

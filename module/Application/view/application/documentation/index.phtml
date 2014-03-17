@@ -1,0 +1,65 @@
+<section class="docs">
+	<div class="grid" style="margin-top:30px">
+		<div class="unit four-fifths">
+			<article>
+				<div class="post-content">
+					<h1>Welcome</h1>
+
+					<p>This is the official documentation site for Apigility.</p>
+
+					<h2>What is Apigility?</h2>
+
+                    <p>
+                        Creating APIs for your applications shouldn't be hard.
+                    </p>
+
+                    <p>
+                        Apigility is an API Builder, designed to simplify creating
+                        and maintaining useful, easy to consume, and well
+                        structured APIs. Regardless of your experience in API
+                        building, with Apigility you can build APIs that enable
+                        mobile apps, developer communities, and any other consumer
+                        controlled access to your applications.
+                    </p>
+
+					<h2>Apigility and Zend Framework 2</h2>
+
+                    <p>
+                        Apigility can be used to implement APIs in 
+                        <a href="http://www.php.net">PHP</a>. We developed Apigility
+                        using <a href="http://framework.zend.com">Zend Framework 2</a>,
+                        but this doesn't mean you have to use this framework to develop
+                        your API. You can use Apigility in any PHP application, using
+                        all the libraries and frameworks that you want.
+                    </p>
+
+					<h2>System Requirements</h2>
+
+                    <p>
+                        To run Apigility you need PHP 5.3.23 or greater. We 
+                        recommend PHP 5.4.8+ for serving the admin user interface.
+                    </p>
+				</div>
+
+				<div class="section-nav">
+  					<div class="left align-right">
+      					<span class="prev disabled">Back</span>
+  					</div>
+
+  					<div class="right align-left">
+      					<a class="next" href="<?php echo $this->url('doc/install') ?>">Next</a>
+      				</div>
+
+  					<div class="clear"></div>
+				</div>
+			</article>	
+		</div>
+
+		<div class="unit one-fifth hide-on-mobiles">
+			<?php echo $this->partial('layout/aside', array(
+					'aside'   => $this->aside,
+					'current' => $this->current
+			)) ?>
+		</div>
+	</div>
+</section>
