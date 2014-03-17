@@ -4,14 +4,34 @@
 			<article>
 				<div class="post-content">
 					<h1>Installation</h1>
+
+					<h2>From the terminal</h2>
 					
+					<p>The easiest way to install <strong>Apigility</strong> is from your terminal, executing the following command:</p>
+
+<div class="highlight">
+<pre>
+<code class="bash"><span class="nv">$ </span>curl -sS http://apigility.org/install | php</code>
+</pre>
+</div>
+
+<p>If you do not have <a href="http://curl.haxx.se/">curl</a> installed you can use PHP itself:</p>
+
+<div class="highlight">
+<pre>
+<code class="bash"><span class="nv">$ </span>php -r "readfile('http://apigility.org/install');" | php</code>
+</pre>
+</div>
+
+<p>Otherwise you can use install <strong>Apigility</strong> using one of the alternative following procedures.</p>
+
 <h2>Via release tarball</h2>
 
 <p>Grab the latest release from the <a href="<?php echo $this->url('download') ?>">download</a> page. Untar it:</p>
 
 <div class="highlight">
 <pre>
-<code class="bash"><span class="nv">$ </span>tar xzf zf-apigility-skeleton-0.9.1.tgz</code>
+<code class="bash"><span class="nv">$ </span>tar xzf zf-apigility-skeleton-<?php echo $this->version ?>.tgz</code>
 </pre>
 </div>
 

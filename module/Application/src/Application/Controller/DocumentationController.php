@@ -34,8 +34,11 @@ class DocumentationController extends AbstractActionController
     
     public function installAction()
     {
+    	$config = $this->getServiceLocator()->get('Config');
+    	
     	return new ViewModel(array(
         	'aside'	=> $this->getAside(),
+    		'version' => $config['apigility']['version'],
         	'current' => $this->url()->fromRoute('doc/install')
         ));
     }
