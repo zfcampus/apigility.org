@@ -1199,20 +1199,28 @@ code.option,code.flag,code.filter,code.output {
 	height: 0;
 }
 
-.note h5,.note p {
-	margin: 0;
+.note h5,.note p,.note ul li{
 	color: #fff;
 }
 
 .note h5 {
+	margin: 0;
 	line-height: 1.5em;
 	font-weight: 800;
 	font-style: normal;
 }
 
-.note p {
+.note p,.note ul li {
 	font-weight: 400;
 	font-size: .75em;
+}
+
+.note a {
+    color: #004200;
+}
+
+.note a:hover {
+    color: #67b745;
 }
 
 .info {

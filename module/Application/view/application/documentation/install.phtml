@@ -7,146 +7,155 @@
 
 					<h2>From the terminal</h2>
 					
-					<p>The easiest way to install <strong>Apigility</strong> is from your terminal, executing the following command:</p>
+                    <p>
+                        The easiest way to install <strong>Apigility</strong> is
+                        from your terminal, executing the following command:
+                    </p>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>curl -sS http://apigility.org/install | php</code>
-</pre>
-</div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -sS http://apigility.org/install | php</code></pre></div>
 
-<p>If you do not have <a href="http://curl.haxx.se/">curl</a> installed you can use PHP itself:</p>
+                    <p>
+                        If you do not have <a href="http://curl.haxx.se/">curl</a>
+                        installed you can use PHP itself:
+                    </p>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>php -r "readfile('http://apigility.org/install');" | php</code>
-</pre>
-</div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -r "readfile('http://apigility.org/install');" | php</code></pre></div>
 
-<p>Otherwise you can use install <strong>Apigility</strong> using one of the alternative following procedures.</p>
+                    <p>
+                        Otherwise you can install <strong>Apigility</strong>
+                        using one of the alternative following procedures.
+                    </p>
 
-<h2>Via release tarball</h2>
+                    <h2>Via release tarball</h2>
 
-<p>Grab the latest release from the <a href="<?php echo $this->url('download') ?>">download</a> page. Untar it:</p>
+                    <p>
+                        Grab the latest release from the 
+                        <a href="<?php echo $this->url('download') ?>">download</a>
+                        page. Untar it:
+                    </p>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>tar xzf zf-apigility-skeleton-<?php echo $this->version ?>.tgz</code>
-</pre>
-</div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>tar xzf zf-apigility-skeleton-<?php echo $this->version ?>.tgz</code></pre></div>
 
-<h2>Via Composer (create-project)</h2>
+                    <p>
+                        If you downloaded the ZIP file, use the following to extract it:
+                    </p>
 
-<p>You can use the <strong>`create-project`</strong> command from <a href="http://getcomposer.org">Composer</a>
-to create the project in one go:</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>unzip -q zf-apigility-skeleton-<?php echo $this->version ?>.tgz</code></pre></div>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>curl -s https://getcomposer.org/installer | php --
-<span class="nv">$ </span>php composer.phar create-project -sdev zfcampus/zf-apigility-skeleton path/to/install
-</code>
-</pre>
-</div>
+                    <h2>Via Composer (create-project)</h2>
 
-<h2>Via Git (clone)</h2>
+                    <p>
+                        You can use the <strong>`create-project`</strong> command
+                        from <a href="http://getcomposer.org">Composer</a> to create
+                        the project in one go:
+                    </p>
 
-<p>First, clone the repository:</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -s https://getcomposer.org/installer | php --
+<span class="nv">$ </span>php composer.phar create-project -sdev zfcampus/zf-apigility-skeleton path/to/install</code></pre></div>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>git clone https://github.com/zfcampus/zf-apigility-skeleton.git
-<span class="nv">$ </span>cd path/to/install
-</code>
-</pre>
-</div>
+                    <h2>Via Git (clone)</h2>
 
-<p>At this point, you need to use <a href="http://getcomposer.org">Composer</a> to install dependencies. Assuming you already have Composer:
+                    <p>First, clone the repository:</p>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>composer.phar install
-</code>
-</pre>
-</div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git clone https://github.com/zfcampus/zf-apigility-skeleton.git
+<span class="nv">$ </span>cd path/to/install</code></pre></div>
 
-<h2>All methods</h2>
+                    <p>
+                        At this point, you need to use
+                        <a href="http://getcomposer.org">Composer</a> to install
+                        dependencies. Assuming you already have Composer:
+                    </p>
 
-<p>Once you have the basic installation, you need to put it in development mode:</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>composer.phar install</code></pre></div>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>cd path/to/install
-<span class="nv">$ </span>php public/index.php development enable
-</code>
-</pre>
-</div>
+                    <h2>All methods</h2>
 
-<p>Now, fire it up! Do one of the following:</p>
+                    <p>Once you have the basic installation, you need to put it in development mode:</p>
 
-<p>
-<ul>
-<li>Create a vhost in your web server that points the DocumentRoot to the
-  `public/` directory of the project</li>
-<li>Fire up the built-in web server in PHP 5.4.8+ (<strong>note</strong>: do not use this for
-  production!)</li>
-</ul>
-</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>cd path/to/install
+<span class="nv">$ </span>php public/index.php development enable</code></pre></div>
 
-<p>In the latter case, do the following:</p>
+                    <p>Now, fire it up! Do one of the following:</p>
 
-<div class="highlight">
-<pre>
-<code class="bash"><span class="nv">$ </span>cd path/to/install
-<span class="nv">$ </span>php -S 0:8888 -t public public/index.php
-</code>
-</pre>
-</div>
+                    <ul>
+                        <li>Create a vhost in your web server that points the
+                            DocumentRoot to the `public/` directory of the project</li>
+                        <li>Fire up the built-in web server in PHP 5.4.8+
+                            (<strong>note</strong>: do not use this for production!)</li>
+                    </ul>
 
-<p>You can then visit the site at <a href="http://localhost:8888">http://localhost:8888</a> - which will bring up a
-welcome page and the ability to visit the dashboard in order to create and
-inspect your APIs.</p>
+                    <p>In the latter case, do the following:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>cd path/to/install
+<span class="nv">$ </span>php -S 0.0.0.0:8888 -t public public/index.php</code></pre></div>
+
+                    <p>
+                        You can then visit the site at
+                        <a href="http://localhost:8888">http://localhost:8888</a>
+                        - which will bring up a welcome page and the ability to
+                        visit the dashboard in order to create and inspect your APIs.
+                    </p>
 
 
-<div class="note info">
-<h5>NOTE ABOUT USING THE PHP BUILT-IN WEB SERVER</h5>
+                    <div class="note info">
+                        <h5>NOTE ABOUT USING THE PHP BUILT-IN WEB SERVER</h5>
 
-<p>PHP's built-in web server did not start supporting the `PATCH` HTTP method until
-5.4.8. Since the admin API makes use of this HTTP method, you must use a version
-&gt;= 5.4.8 when using the built-in web server.</p>
-</div>
+                        <p>
+                            PHP's built-in web server did not start supporting the
+                            <strong>PATCH</strong> HTTP method until 5.4.8. Since 
+                            the admin API makes use of this HTTP method, you must
+                            use a version &gt;= 5.4.8 when using the built-in web server.
+                        </p>
+                    </div>
 
-<div class="note info">
-<h5>NOTE ABOUT OPCACHE</h5>
+                    <div class="note info">
+                        <h5>NOTE ABOUT OPCACHE</h5>
 
-<p><strong>Disable all opcode caches when running the admin!</strong></p>
+                        <p><strong>Disable all opcode caches when running the admin!</strong></p>
 
-<p>The admin cannot and will not run correctly when an opcode cache, such as APC or
-OpCache, is enabled. Apigility does not use a database to store configuration;
-instead, it uses PHP configuration files. Opcode caches will cache these files
-on first load, leading to inconsistencies as you write to them, and will
-typically lead to a state where the admin API and code become unusable.</p>
+                        <p>
+                            The admin cannot and will not run correctly when an 
+                            opcode cache, such as APC or OpCache, is enabled. 
+                            Apigility does not use a database to store 
+                            configuration; instead, it uses PHP configuration 
+                            files. Opcode caches will cache these files on 
+                            first load, leading to inconsistencies as you write 
+                            to them, and will typically lead to a state where 
+                            the admin API and code become unusable.
+                        </p>
 
-<p>The admin is a <strong>development</strong> tool, and intended for use a development
-environment. As such, you should likely disable opcode caching, regardless.</p>
+                        <p>
+                            The admin is a <strong>development</strong> tool, 
+                            and intended for use in a development environment. As 
+                            such, you should likely disable opcode caching, 
+                            regardless.
+                        </p>
 
-<p>When you are ready to deploy your API to <strong>production</strong>, however, you can
-disable development mode, thus disabling the admin interface, and safely run an
-opcode cache again. Doing so is recommended for production due to the tremendous
-performance benefits opcode caches provide.</p>
-</div>
-
+                        <p>
+                            When you are ready to deploy your API to <strong>production</strong>,
+                            however, you can disable development mode, thus 
+                            disabling the admin interface, and safely run an
+                            opcode cache again. Doing so is recommended for
+                            production due to the tremendous performance benefits
+                            opcode caches provide.
+                        </p>
+                    </div>
 				</div>
+
 				<div class="section-nav">
   					<div class="left align-right">
       					<a class="prev" href="<?php echo $this->url('doc') ?>">Back</a>
   					</div>
+
   					<div class="right align-left">
       					<span class="next disabled">Next</span>
       				</div>
+
   					<div class="clear"></div>
 				</div>
 			</article>	
 		</div>
+
 		<div class="unit one-fifth hide-on-mobiles">
 			<?php echo $this->partial('layout/aside', array(
 					'aside'   => $this->aside,

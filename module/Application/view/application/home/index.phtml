@@ -6,32 +6,50 @@
 		</div>
 	</div>
 </section>
+
 <section class="features">
 	<div class="grid">
 		<div class="unit one-third">
 			<h2>Be API-centric</h2>
-			<p>Separating presentation logic from data provides the flexibility
+
+            <p>
+                Separating presentation logic from data provides the flexibility
 				to support multiple client form factors, and future-proofs apps to
 				allow behind-the-scenes change without breaking user interfaces.
-				With Apigility you can take the code that powers your business, and
-				then API-enable it.</p>
+				With Apigility, you can take the code that powers your business, and
+                then API-enable it.
+            </p>
 		</div>
+
 		<div class="unit one-third">
 			<h2>Think mobile</h2>
-			<p>An API-based architecture is essential to agile delivery of mobile
+
+            <p>
+                An API-based architecture is essential to agile delivery of mobile
 				applications. Apigility provides JSON representations that can be
 				parsed and used in any mobile framework; write for the web or native
-				applications simultaneously!</p>
+                applications simultaneously!
+            </p>
 		</div>
+
 		<div class="unit one-third">
 			<h2>Download</h2>
+
 			<p>Download Apigility <strong><?php echo $this->version?></strong></p>
+
 			<p><a href="<?php echo $this->url('download') ?>"><img src="img/download.png" alt="Download" title="Download"></a></p>
-			<p>or install in your terminal without download, as reported below or in the <a href="<?php echo $this->url('doc')?>">documentation</a> page.</p>
+
+            <p>
+                or install in your terminal without download, as documented below
+                or in the <a href="<?php echo $this->url('doc/install')?>">installation 
+                documentation page</a>.
+            </p>
 		</div>
+
 		<div class="clear"></div>
 	</div>
 </section>
+
 <section class="quickstart">
 	<div class="grid">
 		<div class="unit golden-small center-on-mobiles">
@@ -39,40 +57,63 @@
 				Startup <em>in&nbsp;seconds</em>
 			</h4>
 		</div>
+
 		<div class="unit golden-large code">
 			<p class="title">Quick-start in your terminal</p>
+
 			<div class="shell">
 				<p class="line">
 					<span class="prompt">$</span> <span class="command">curl -sS http://apigility.org/install | php</span>
 				</p>
+
 				<p class="line">
 					<span class="output"># or if you do not have <a href="http://curl.haxx.se/">curl</a> installed</span>
 				</p>
+
 				<p class="line">
 					<span class="prompt">$</span> <span class="command">php -r "readfile('http://apigility.org/install');" | php</span>
 				</p>
+
 				<p class="line">
 					<span class="output"># open your browser to <a href="http://localhost:8888">http://localhost:8888</a></span>
 				</p>
 			</div>
 		</div>
+
 		<div class="clear"></div>
 	</div>
 </section>
+
 <section class="platforms">
 	<div class="grid">
 		<div class="unit half">
-			<p>Do you want an overview of the Apigility features?<br />Watch this video or <a href="<?php echo $this->url('video')?>">others here</a></p>
-			<iframe src="//player.vimeo.com/video/83769801" width="400"
-				height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen
-				allowfullscreen></iframe>
+            <p>
+                Want an overview of the Apigility features?
+                <br />
+                Watch this video or <a href="<?php echo $this->url('video')?>">others here</a>
+            </p>
+
+            <iframe 
+                src="https://docs.google.com/a/zend.com/file/d/0B3DjV-SlG3QbajF2aFE0NXdvcTQ/preview" 
+                width="400" height="240"></iframe>
 		</div>
+
 		<div class="unit half">	
 			<h2>Apigility key features</h2>
-			<p>RESTful, RPC, JSON (HAL), HTTP Problem, Versioning, Filter and Validation, Authentication (HTTP Basic/Digest, OAuth2), Documentation (Swagger, HTML).</p>
+
+            <p>
+                RESTful or RPC services; JSON (specifically, <a href="http://tools.ietf.org/html/draft-kelly-json-hal-06">HAL</a>);
+                <a href="http://tools.ietf.org/html/draft-nottingham-http-problem-06">Problem Details for HTTP APIs</a>;
+                Versioning; Normalisation and Validation; Authentication (HTTP Basic/Digest, OAuth2);
+                Documentation (HTML, Swagger).
+            </p>
+
 			<p><a href="<?php echo $this->url('doc')?>">Discover more</a> ></p>
+
 			<br />
+
 			<h2>Apigility runs everywhere</h2>
+
 			<p><img src="img/platforms.png" alt="PHP, Mac, Windows, GNU/Linux" title="PHP, Mac, Windows, GNU/Linux"></p>
 		</div>
 	</div>

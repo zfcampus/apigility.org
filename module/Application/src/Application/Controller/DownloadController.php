@@ -19,9 +19,9 @@ class DownloadController extends AbstractActionController
 		return array(
 			'' => array(
 				'Download' => $this->url()->fromRoute('download'),
-				'Release Note' => $this->url()->fromRoute('download/note')
+				'Changelog' => $this->url()->fromRoute('download/note')
 			),
-			'Previous Release' => array(
+			'Previous Releases' => array(
 				'0.9.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.9.0',
 				'0.8.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.8.0',
 				'0.7.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.7.0',

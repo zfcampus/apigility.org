@@ -4,45 +4,70 @@
 			<article>
 				<div class="post-content">
 					<h1>Download</h1>
-					<p>Here you can download the <strong><?php echo $this->version ?></strong> version of <strong>Apigility</strong>:<br /><br />
+
+                    <p>
+                        Download the <strong><?php echo $this->version ?></strong> version of <strong>Apigility</strong>:<br /><br />
 						<a href="<?php echo $this->zip ?>"><img src="img/download_zip.png" alt="Zip" title="Zip"></a>
 						<a href="<?php echo $this->tgz ?>"><img hspace="30" src="img/download_tgz.png" alt="Tgz" title="Tgz"></a> 
 					</p>
-					<p>After download, you need to extract the .zip (or .tgz) file, go inside the extracted folder and run the following command using <strong>PHP 5.4+</strong>:</p>
-					<div class="highlight">
-						<pre><code class="bash">
-<span class="nv">$ </span>php -S 0:8888 -t public public/index.php
-</code>
-						</pre>
-					</div>
-					<p>You can start <strong>Apigility</strong> opening your browser to <a href="http://localhost:8888">http://localhost:8888</a></p>
+
+                    <p>
+                        After download, you need to extract the .zip (or .tgz) file,
+                        go inside the extracted folder and run the following command
+                        using <strong>PHP 5.4+</strong>:
+                    </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -S 0.0.0.0:8888 -t public public/index.php</code></pre></div>
+
+                    <p>
+                        You can start <strong>Apigility</strong> opening your
+                        browser to <a href="http://localhost:8888">http://localhost:8888</a>
+                    </p>
+
 					<div class="note info">
-						<h5>If you are using PHP < 5.4</h5>
-						<p>You need to configure a web server to publish the <strong>public</strong> folder of Apigility.
+						<h5>If you are using PHP &lt; 5.4</h5>
+
+                        <p>
+                            You need to configure a web server to publish the 
+                            <strong>public</strong> folder of Apigility.
+                        </p>
 					</div>
-					<p>If you want, you can install Apigility without download the previous package, using the following command in your terminal (you need the internet connection enabled):</p>
-					<div class="highlight">
-						<pre><code class="bash">
-<span class="nv">$ </span>curl -sS http://apigility.org/install | php
-</code>
-						</pre>
-					</div>
-					<p>If you do not have <a href="http://curl.haxx.se/">curl</a> installed you can use PHP itself:</p>
-					<div class="highlight">
-						<pre><code class="bash">
-<span class="nv">$ </span>php -r "readfile('http://apigility.org/install');" | php
-</code>
-						</pre>
-					</div>
+
+                    <div class="note info">
+                        <h5>Use any port</h5>
+
+                        <p>
+                            While the above command uses port <strong>8888</strong>,
+                            you can substitute any available port on your system.
+                        </p>
+                    </div>
+
+                    <p>
+                        You can also install Apigility without downloading
+                        the previous package, using the following command in
+                        your terminal (make sure your internet connection is
+                        enabled):
+                    </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -sS http://apigility.org/install | php</code></pre></div>
+
+                    <p>
+                        If you do not have <a href="http://curl.haxx.se/">curl</a>
+                        installed you can use PHP itself:
+                    </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -r "readfile('http://apigility.org/install');" | php</code></pre></div>
 				</div>
 			</article>
 		</div>
+
 		<div class="unit one-fifth hide-on-mobiles">
 			<?php echo $this->partial('layout/aside', array(
 					'aside'   => $this->aside,
 					'current' => $this->current
 			)) ?>
 		</div>
+
 		<div class="clear"></div>
 	</div>
 </section>
