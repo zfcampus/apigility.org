@@ -8,6 +8,7 @@
     "homepage": "http://apigility.org",
     "require": {
         "php": ">=5.3.23",
+        "libra/libra-markdown": "~1.1",
         "zendframework/zendframework": "=2.3.0"
     }
 }

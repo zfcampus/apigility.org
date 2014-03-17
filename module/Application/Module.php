@@ -38,4 +38,28 @@ class Module
             ),
         );
     }
+
+    public function getServiceConfig()
+    {
+        return array('factories' => array(
+            'Application\GithubReleases' => function ($services) {
+                $releases = array();
+                if (file_exists('data/releases.json')) {
+                    $json     = file_get_contents('data/releases.json');
+                    $releases = json_decode($json);
+                }
+                return new GithubReleases($releases);
+            },
+        ));
+    }
+
+    public function getControllerConfig()
+    {
+        return array('factories' => array(
+            'Application\Controller\Download' => function ($controllers) {
+                $services = $controllers->getServiceLocator();
+                return new Controller\DownloadController($services->get('Application\GithubReleases'));
+            },
+        ));
+    }
 }

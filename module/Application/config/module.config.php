@@ -152,7 +152,6 @@ return array(
         'invokables' => array(
             'Application\Controller\Home' => 'Application\Controller\HomeController',
             'Application\Controller\Video' => 'Application\Controller\VideoController',
-            'Application\Controller\Download' => 'Application\Controller\DownloadController',
             'Application\Controller\Contacts' => 'Application\Controller\ContactsController',
             'Application\Controller\Documentation' => 'Application\Controller\DocumentationController'
         ),

@@ -9,26 +9,36 @@
 
 namespace Application\Controller;
 
+use Application\GithubReleases;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 class DownloadController extends AbstractActionController
 {	
+    /**
+     * @var GithubReleases
+     */
+    protected $releases;
+
+    public function __construct(GithubReleases $releases)
+    {
+        $this->releases = $releases;
+    }
+
 	protected function getAside()
 	{
-		return array(
+		$aside = array(
 			'' => array(
 				'Download' => $this->url()->fromRoute('download'),
 				'Changelog' => $this->url()->fromRoute('download/note')
 			),
-			'Previous Releases' => array(
-				'0.9.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.9.0',
-				'0.8.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.8.0',
-				'0.7.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.7.0',
-				'0.6.0' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/tag/0.6.0',
-				'All the releases' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases'
-			)
-		);
+            'Previous Releases' => array(),
+        );
+        foreach ($this->releases as $release) {
+            $aside['Previous Releases'][$release['tag']] = $release['url'];
+        }
+        $aside['Previous Releases']['All the releases'] = 'https://github.com/zfcampus/zf-apigility-skeleton/releases';
+        return $aside;
 	}
 	
     public function indexAction()
@@ -46,12 +56,22 @@ class DownloadController extends AbstractActionController
     
     public function noteAction()
     {
-    	$config = $this->getServiceLocator()->get('Config');
+    	$config    = $this->getServiceLocator()->get('Config');
+        $version   = $config['apigility']['version'];
+        $changelog = 'No changelog found';
+
+        foreach ($this->releases as $release) {
+            if ($release['tag'] === $version) {
+                $changelog = $release['notes'];
+                break;
+            }
+        }
     	 
     	return new ViewModel(array(
-    		'aside' => $this->getAside(),
-    		'current' => $this->url()->fromRoute('download/note'),
-    		'version' => $config['apigility']['version']
+    		'aside'     => $this->getAside(),
+    		'current'   => $this->url()->fromRoute('download/note'),
+    		'version'   => $version,
+            'changelog' => $changelog,
     	));
     }
 }
