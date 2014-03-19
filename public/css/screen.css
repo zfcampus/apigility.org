@@ -303,6 +303,7 @@ table {
 	display: none;
 }
 /* Responsive Stuff */
+
 @media screen and (max-width: 568px) {
 	/* Stack anything that isn’t full-width on smaller screens */
 	.grid .unit {
@@ -335,7 +336,9 @@ table {
     margin:  0 auto;
 }
 }
-*/ /**\ * $style.css *\**/ /* Base */
+*/
+
+/**\ * $style.css *\**/ /* Base */
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -364,6 +367,33 @@ body {
 	clear: both;
 	visibility: hidden;
 }
+
+iframe {
+    border: none;
+}
+
+/* Responsive Helpers */
+img.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.media-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.media-wrapper iframe,
+.media-wrapper object,
+.media-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Sections */
 body>header,body>section,body>footer {
 	float: left;
@@ -397,11 +427,13 @@ nav li {
 }
 
 .main-nav li a {
+    display: inline-block;
+    margin-bottom: 5px;
 	border-radius: 5px;
 	font-weight: 800;
 	font-size: 14px;
 	padding: 0.5em 1em;
-	text-shadow: none;
+	text-shadow: 1px 0 2px #f0f0f0;
 	text-transform: uppercase;
 	transition: all .25s;
 	-moz-transition: all .25s;
@@ -456,10 +488,46 @@ nav li {
 	padding: 8px;
 }
 
-@media ( max-width : 768px) {
-	.main-nav ul {
-		text-align: right;
-	}
+.github-ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+@media ( max-width : 340px) {
+    .github-ribbon {
+        max-width: 35%;
+    }
+}
+
+@media ( max-width : 514px) {
+    .mobile-nav ul > li {
+        width: auto;
+        display: block;
+    }
+    .mobile-nav a {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 515px) and (max-width: 768px) {
+    .mobile-nav ul {
+        position: relative; /* above .github-ribbon */
+    }
+}
+
+@media ( max-width : 640px) {
+    .brand {
+        text-align: center;
+        width: 100% !important;
+    }
+    .mobile-nav.show-on-mobiles {
+        display: block;
+    }
+    .main-nav.hide-on-mobiles {
+        display: none;
+    }
 }
 
 @media ( max-width : 830px) {
@@ -470,6 +538,14 @@ nav li {
 		display: none;
 	}
 }
+
+@media ( max-width: 930px ) {
+    .main-nav ul {
+        position: relative; /* above .github-ribbon */
+        text-align: right;
+    }
+}
+
 /* Footer */
 body>footer {
 	background: #013755;
@@ -597,6 +673,7 @@ body>footer a:hover img {
 }
 
 .quickstart .code .shell {
+    overflow: auto;
 	padding: 20px;
 	text-shadow: none;
 	margin: 0 20px;
@@ -1337,6 +1414,11 @@ code.option,code.flag,code.filter,code.output {
 	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
 }
+
+img.download {
+    margin-right: 30px;
+}
+
 /* Responsive tables */
 @media ( max-width : 768px) {
 	.mobile-side-scroller {
