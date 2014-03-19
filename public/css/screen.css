@@ -303,6 +303,12 @@ table {
 	display: none;
 }
 /* Responsive Stuff */
+
+img.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
 @media screen and (max-width: 568px) {
 	/* Stack anything that isn’t full-width on smaller screens */
 	.grid .unit {
@@ -597,6 +603,7 @@ body>footer a:hover img {
 }
 
 .quickstart .code .shell {
+    overflow: auto;
 	padding: 20px;
 	text-shadow: none;
 	margin: 0 20px;

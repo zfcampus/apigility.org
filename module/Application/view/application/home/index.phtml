@@ -37,11 +37,15 @@
 
 			<p>Download Apigility <strong><?php echo $this->version?></strong></p>
 
-			<p><a href="<?php echo $this->url('download') ?>"><img src="img/download.png" alt="Download" title="Download"></a></p>
+			<p>
+                <a href="<?php echo $this->url('download') ?>">
+                    <img src="img/download.png" alt="Download" title="Download" class="responsive">
+                </a>
+            </p>
 
             <p>
                 or install in your terminal without download, as documented below
-                or in the <a href="<?php echo $this->url('doc/install')?>">installation 
+                or in the <a href="<?php echo $this->url('doc/install')?>">installation
                 documentation page</a>.
             </p>
 		</div>
@@ -92,11 +96,11 @@
                 <br />
                 Watch this video or <a href="<?php echo $this->url('video')?>">others here</a>
             </p>
-            
+
             <iframe onLoad="this.style.display='inline'" src="https://docs.google.com/a/zend.com/file/d/0B3DjV-SlG3QbajF2aFE0NXdvcTQ/preview" width="400" height="240" style="display:none"></iframe>
 		</div>
 
-		<div class="unit half">	
+		<div class="unit half">
 			<h2>Apigility key features</h2>
 
             <p>
@@ -112,7 +116,10 @@
 
 			<h2>Apigility runs everywhere</h2>
 
-			<p><img src="img/platforms.png" alt="PHP, Mac, Windows, GNU/Linux" title="PHP, Mac, Windows, GNU/Linux"></p>
+			<p><img src="img/platforms.png"
+                    alt="PHP, Mac, Windows, GNU/Linux"
+                    title="PHP, Mac, Windows, GNU/Linux"
+                    class="responsive"></p>
 		</div>
 	</div>
 </section>
