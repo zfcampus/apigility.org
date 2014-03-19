@@ -1408,6 +1408,11 @@ code.option,code.flag,code.filter,code.output {
 	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
 }
+
+img.download {
+    margin-right: 30px;
+}
+
 /* Responsive tables */
 @media ( max-width : 768px) {
 	.mobile-side-scroller {
