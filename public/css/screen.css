@@ -427,11 +427,13 @@ nav li {
 }
 
 .main-nav li a {
+    display: inline-block;
+    margin-bottom: 5px;
 	border-radius: 5px;
 	font-weight: 800;
 	font-size: 14px;
 	padding: 0.5em 1em;
-	text-shadow: none;
+	text-shadow: 1px 0 2px #f0f0f0;
 	text-transform: uppercase;
 	transition: all .25s;
 	-moz-transition: all .25s;
@@ -486,10 +488,40 @@ nav li {
 	padding: 8px;
 }
 
-@media ( max-width : 768px) {
-	.main-nav ul {
-		text-align: right;
-	}
+.github-ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+@media ( max-width : 514px) {
+    .mobile-nav ul > li {
+        width: auto;
+        display: block;
+    }
+    .mobile-nav a {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 515px) and (max-width: 768px) {
+    .mobile-nav ul {
+        position: relative; /* above .github-ribbon */
+    }
+}
+
+@media ( max-width : 640px) {
+    .brand {
+        text-align: center;
+        width: 100% !important;
+    }
+    .mobile-nav.show-on-mobiles {
+        display: block;
+    }
+    .main-nav.hide-on-mobiles {
+        display: none;
+    }
 }
 
 @media ( max-width : 830px) {
@@ -500,6 +532,14 @@ nav li {
 		display: none;
 	}
 }
+
+@media ( max-width: 930px ) {
+    .main-nav ul {
+        position: relative; /* above .github-ribbon */
+        text-align: right;
+    }
+}
+
 /* Footer */
 body>footer {
 	background: #013755;
