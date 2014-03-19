@@ -9,23 +9,19 @@
 
 $localPath    = __DIR__;
 $apigilityDir = 'apigility';
-$tmpFile      = sys_get_temp_dir() . '/apigility.zip';
 $port         = '8888';
+$releaseUrl   = 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/%VERSION%/zf-apigility-skeleton-%VERSION%.zip';
+$tmpFile      = sys_get_temp_dir() . '/apigility_' . md5($releaseUrl) . '.zip';
 
 checkPlatform();
 
 if (file_exists($apigilityDir)) {
     die("Error: The apigility directory already exists\n");
 }
-$config = require __DIR__ . '/../config/autoload/global.php';
-if (!isset($config['links']['zip'])) {
-	die("Error: the Apigility release is not specified, please download it from the apigility.org");
-} 
 
-$tmpFile = sys_get_temp_dir() . '/apigility_' . md5($config['links']['zip']) . '.zip';
 if (!file_exists($tmpFile)) {
 	echo "Download Apigility\n";
-	$fr = fopen($config['links']['zip'], 'r');
+	$fr = fopen($releaseUrl, 'r');
 	$fw = fopen($tmpFile, 'w');
 	while (!feof($fr)) {
 	    fwrite($fw, fread($fr, 1048576)); // 1 MB buffer
