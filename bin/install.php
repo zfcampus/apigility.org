@@ -3,7 +3,7 @@
 /**
  * Apigility installer
  *
- * http://www.apigility.org
+ * @see http://www.apigility.org
  * (C) 2013-2014 Copyright Zend Technologies Ltd.
  */
 
@@ -17,16 +17,25 @@ checkPlatform();
 if (file_exists($apigilityDir)) {
     die("Error: The apigility directory already exists\n");
 }
-echo "Download Apigility\n";
+$config = require __DIR__ . '/../config/autoload/global.php';
+if (!isset($config['links']['zip'])) {
+	die("Error: the Apigility release is not specified, please download it from the apigility.org");
+} 
 
-$fr = fopen('https://github.com/zfcampus/zf-apigility-skeleton/archive/master.zip', 'r');
-$fw = fopen($tmpFile, 'w');
-while (!feof($fr)) {
-    fwrite($fw, fread($fr, 1024));
-    echo '.';
+$tmpFile = sys_get_temp_dir() . '/apigility_' . md5($config['links']['zip']) . '.zip';
+if (!file_exists($tmpFile)) {
+	echo "Download Apigility\n";
+	$fr = fopen($config['links']['zip'], 'r');
+	$fw = fopen($tmpFile, 'w');
+	while (!feof($fr)) {
+	    fwrite($fw, fread($fr, 1048576)); // 1 MB buffer
+	    echo '.';
+	}
+	fclose($fw);
+	fclose($fr);
+} else  {
+	echo "Get Apigility from cache [$tmpFile]";
 }
-fclose($fw);
-fclose($fr);
 
 echo "\nInstall Apigility\n";
 
@@ -43,28 +52,10 @@ $zip->close();
 
 // Rename to apigility
 rename($dirName, 'apigility');
-// Remove temp file
-unlink($tmpFile);
 
-if (strpos(exec("composer -V"), "version") !== false) {
-    $composer = 'composer';
-} else {
-    $composer = 'php composer.phar';
-    echo "Get composer.phar\n";
-    // Download composer.phar
-    file_put_contents("$apigilityDir/composer.phar",
-        file_get_contents('https://getcomposer.org/composer.phar'));
-}
+// Change directory to apigility
 chdir($apigilityDir);
 
-// Install composer
-passthru("$composer install");
-
-echo "Enable development mode\n";
-$result = exec("php public/index.php development enable");
-if (strpos($result, "development mode") === false) {
-    die("Error: I cannot switch Apigility to development mode\n");
-}
 echo "Installation complete.\n";
 if (version_compare(PHP_VERSION, '5.4.0') >= 0) {
     echo "Running PHP internal web server.\n";
