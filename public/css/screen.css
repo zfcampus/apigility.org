@@ -304,11 +304,6 @@ table {
 }
 /* Responsive Stuff */
 
-img.responsive {
-    max-width: 100%;
-    height: auto;
-}
-
 @media screen and (max-width: 568px) {
 	/* Stack anything that isn’t full-width on smaller screens */
 	.grid .unit {
@@ -341,7 +336,9 @@ img.responsive {
     margin:  0 auto;
 }
 }
-*/ /**\ * $style.css *\**/ /* Base */
+*/
+
+/**\ * $style.css *\**/ /* Base */
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -370,6 +367,33 @@ body {
 	clear: both;
 	visibility: hidden;
 }
+
+iframe {
+    border: none;
+}
+
+/* Responsive Helpers */
+img.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.media-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.media-wrapper iframe,
+.media-wrapper object,
+.media-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Sections */
 body>header,body>section,body>footer {
 	float: left;
