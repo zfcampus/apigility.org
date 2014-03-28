@@ -5,7 +5,7 @@
 				<div class="post-content">
 					<h1><?php echo $this->version ?> Changelog</h1>
 
-                    <?php echo $this->markdown($this->changelog) ?>
+                    <?php echo $this->parsedown($this->changelog) ?>
 				</div>
 			</article>
 		</div>
