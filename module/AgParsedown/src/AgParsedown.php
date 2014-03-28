@@ -19,7 +19,7 @@ class AgParsedown implements HelperInterface
     protected $parsedown;
 
     /**
-     * @param Parsedown $parsedown 
+     * @param Parsedown $parsedown
      */
     public function __construct(Parsedown $parsedown)
     {
@@ -28,8 +28,8 @@ class AgParsedown implements HelperInterface
 
     /**
      * Invoke as a function
-     * 
-     * @param string $string 
+     *
+     * @param string $string
      * @return string
      * @throws RuntimeException for non-string input
      */
@@ -59,8 +59,8 @@ class AgParsedown implements HelperInterface
 
     /**
      * Implement HelperInterface
-     * 
-     * @param RendererInterface $renderer 
+     *
+     * @param RendererInterface $renderer
      */
     public function setView(RendererInterface $renderer)
     {
@@ -69,7 +69,7 @@ class AgParsedown implements HelperInterface
 
     /**
      * Implement HelperInterface
-     * 
+     *
      * @return RendererInterface
      */
     public function getView()
