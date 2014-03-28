@@ -3,106 +3,46 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e152ba87a97cc2c513f69d8d984fd537",
+    "hash": "36b0051edb595c9d89561f63b13c9aba",
     "packages": [
         {
-            "name": "libra/libra-markdown",
-            "version": "1.1.1",
+            "name": "erusev/parsedown",
+            "version": "0.9.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/libracms/libra-markdown.git",
-                "reference": "5ef0c6c10bb572f37a831c71a28f12adbf0a0639"
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "d29ff18299210b52a75a631a70963e7c8b35b04f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libracms/libra-markdown/zipball/5ef0c6c10bb572f37a831c71a28f12adbf0a0639",
-                "reference": "5ef0c6c10bb572f37a831c71a28f12adbf0a0639",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/d29ff18299210b52a75a631a70963e7c8b35b04f",
+                "reference": "d29ff18299210b52a75a631a70963e7c8b35b04f",
                 "shasum": ""
-            },
-            "require": {
-                "michelf/php-markdown": "~1.4",
-                "php": ">=5.3.3"
-            },
-            "type": "zf-module",
-            "autoload": {
-                "classmap": [
-                    "Module.php",
-                    "src"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Vitalii Nagara",
-                    "email": "duke@ejoom.com",
-                    "role": "contributer"
-                }
-            ],
-            "description": "Markdown view helper for ZF2",
-            "homepage": "http://michelf.ca/projects/php-markdown/",
-            "keywords": [
-                "ZendFramework",
-                "cms",
-                "libra",
-                "markdown",
-                "zf",
-                "zf2"
-            ],
-            "time": "2014-02-12 04:55:33"
-        },
-        {
-            "name": "michelf/php-markdown",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/96d8150406f67e683ef4acc09fef91785fef1266",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-lib": "1.4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
-                    "Michelf": ""
+                    "Parsedown": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Michel Fortin",
-                    "email": "michel.fortin@michelf.ca",
-                    "homepage": "http://michelf.ca/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "John Gruber",
-                    "homepage": "http://daringfireball.net/"
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
                 }
             ],
-            "description": "PHP Markdown",
-            "homepage": "http://michelf.ca/projects/php-markdown/",
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
             "keywords": [
-                "markdown"
+                "markdown",
+                "parser"
             ],
-            "time": "2013-11-29 17:09:24"
+            "time": "2014-02-06 12:16:14"
         },
         {
             "name": "zendframework/zendframework",
