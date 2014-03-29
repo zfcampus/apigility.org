@@ -1,0 +1,18 @@
+<section class="docs">
+	<div class="grid" style="margin-top:30px">
+		<div class="unit four-fifths">
+			<article>
+				<div class="post-content">
+                <?php echo $this->parsedown($this->model->getPageContents($this->page)) ?>
+				</div>
+			</article>	
+		</div>
+
+		<div class="unit one-fifth">
+			<?php echo $this->partial('documentation/toc', array(
+					'model'   => $this->model,
+					'current' => $this->page,
+			)) ?>
+		</div>
+	</div>
+</section>
