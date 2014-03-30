@@ -14,7 +14,7 @@ return array(
         'documentation' => array(
             'type' => 'Literal',
             'options' => array(
-                'route' => '/ag-documentation',
+                'route' => '/documentation',
                 'defaults' => array(
                     'controller' => 'Documentation\Controller',
                     'action'     => 'index',
