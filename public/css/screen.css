@@ -802,7 +802,7 @@ aside {
 	padding-top: 30px;
 }
 
-aside h4 {
+aside h4, aside.toc h2 {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 700;
@@ -810,6 +810,10 @@ aside h4 {
 	margin-left: -30px;
 	display: inline-block;
 	border-bottom: 1px solid #013755;
+}
+
+aside.toc h1 {
+    display: none;
 }
 
 aside ul {
@@ -1033,7 +1037,7 @@ pre,code {
 	}
 }
 
-.highlight,p>pre,p>code,p>nobr>code,li>code,h5>code,.note>code {
+.highlight,p>pre,p>code,p>nobr>code,li>code,h5>code,.note>code,pre>code[class*='language-'] {
 	background: #555555;
 	color: #fff;
 	border-radius: 5px;
@@ -1048,7 +1052,7 @@ pre,code {
 	font-size: 0.8em;
 }
 
-.highlight {
+.highlight,pre>code[class*='language-'] {
 	padding: 10px 0;
 	width: 100%;
 	overflow: auto;
