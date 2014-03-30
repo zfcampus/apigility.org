@@ -19,9 +19,18 @@ class Pygmentize
 
     public function transform($lexer, $code)
     {
+        $options = '-l %s -f html';
+
         $lexer = strtolower($lexer);
-        if ($lexer === 'bash') {
-            $lexer = 'console';
+        switch ($lexer) {
+            case 'bash':
+                $lexer = 'console';
+                break;
+            case 'php':
+                $options .= ' -P startinline=True';
+                break;
+            default:
+                break;
         }
 
         $processDescription = array(
@@ -30,7 +39,7 @@ class Pygmentize
             2 => array('pipe', 'a'),
         );
 
-        $command = sprintf('%s -l %s', $this->pygmentize, $lexer);
+        $command = sprintf('%s ' . $options, $this->pygmentize, $lexer);
 
         $process = proc_open($command, $processDescription, $pipes);
 

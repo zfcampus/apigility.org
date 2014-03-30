@@ -3,7 +3,7 @@
 		<div class="unit four-fifths">
 			<article>
 				<div class="post-content">
-                <?php echo $this->parsedown($this->model->getPageContents($this->page)) ?>
+                <?php echo $this->manualpage($this->page, $this->model) ?>
 				</div>
 			</article>	
 		</div>

@@ -53,7 +53,7 @@ class ManualPageHelper implements HelperInterface
 
         // highlight fenced code blocks
         if ($highlightContents) {
-            $contents = preg_replace_callback('#^```(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)\n```#is', array($this, 'highlightFencedBlock'), $contents);
+            $contents = preg_replace_callback("#\n\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)\n\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
         }
 
         // transform markdown to HTML
@@ -83,8 +83,13 @@ class ManualPageHelper implements HelperInterface
     public function rewriteLinks($matches)
     {
         $attr = $matches['attr'];
-        $link = $matches['link'];
-        $link = $this->url->__invoke('documentation/page', array('page' => $link));
+        $link = '/' . preg_replace('#^(?:asset/)?(.*?)(?:\.md)?$#', '$1', $matches['link']);
+
+        // Non-asset link needs to be relative to documentation route
+        if (0 !== strpos($matches['link'], 'asset/')) {
+            $link = $this->url->__invoke('documentation') . $link;
+        }
+
         return sprintf('%s="%s"', $attr, $link);
     }
 

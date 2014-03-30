@@ -1729,3 +1729,7 @@ img.download {
 	-o-user-select: none;
 	user-select: none;
 }
+
+.post-content img {
+    width: 100%;
+}
