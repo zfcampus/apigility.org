@@ -1,7 +1,7 @@
 <aside class="toc">
 <?php 
-    $toc = $this->parsedown($this->model->getPageContents('TOC'));
-    $toc = preg_replace('#<li>(<a href="' . $this->page . '")#s', '<li class="current">$1', $toc);
+    $toc = $this->manualpage('TOC', $this->model, false);
+    $toc = preg_replace('#<li>(<a href=".*?' . $this->page . '")#s', '<li class="current">$1', $toc);
     echo $toc;
 ?>
 </aside>

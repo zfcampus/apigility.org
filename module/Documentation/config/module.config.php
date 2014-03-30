@@ -40,6 +40,12 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'Documentation\Model' => 'Documentation\DocumentationModelFactory',
+            'Documentation\Pygmentize' => 'Documentation\PygmentizeFactory',
+        ),
+    ),
+    'view_helpers' => array(
+        'factories' => array(
+            'manualpage' => 'Documentation\ManualPageHelperFactory',
         ),
     ),
     'view_manager' => array(
