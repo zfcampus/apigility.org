@@ -1733,3 +1733,7 @@ img.download {
 .post-content img {
     width: 100%;
 }
+
+.toc ul.collapse {
+    display: none;
+}

@@ -12,7 +12,9 @@
                      ->prependStylesheet($this->basePath() . '/css/screen.css') ?>
 
     <?php echo $this->headScript()
-            ->prependFile($this->basePath() . '/bower_components/modernizr/modernizr.js') ?>
+        ->prependFile($this->basePath('/bower_components/zepto/zepto.min.js'))
+        ->prependFile($this->basePath('/bower_components/modernizr/modernizr.js'));
+?>
 </head>
 <body class="wrap">
 	<a href="<?php echo $this->layout()->forkme ?>"><img
@@ -58,6 +60,6 @@
 		</div>
 	</footer>
 
-    <?php echo $this->inlineScript()?>
+    <?php echo $this->inlineScript() ?>
 </body>
 </html>
