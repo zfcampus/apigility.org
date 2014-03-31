@@ -117,33 +117,32 @@
         },
         {
             "name": "rwoverdijk/assetmanager",
-            "version": "1.3.5",
+            "version": "1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RWOverdijk/AssetManager.git",
-                "reference": "ef5965c763dd0261d8516d6f9ab011c2fcc3e902"
+                "reference": "d1b7cf231aa3ee08e1efe46f10f73c0874139f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RWOverdijk/AssetManager/zipball/ef5965c763dd0261d8516d6f9ab011c2fcc3e902",
-                "reference": "ef5965c763dd0261d8516d6f9ab011c2fcc3e902",
+                "url": "https://api.github.com/repos/RWOverdijk/AssetManager/zipball/d1b7cf231aa3ee08e1efe46f10f73c0874139f74",
+                "reference": "d1b7cf231aa3ee08e1efe46f10f73c0874139f74",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "1.1.*",
+                "kriswallsmith/assetic": "~1.1.0",
                 "php": ">=5.3.3",
-                "zendframework/zend-config": "2.*",
-                "zendframework/zend-console": "2.*",
                 "zendframework/zend-eventmanager": "2.*",
-                "zendframework/zend-form": "2.*",
-                "zendframework/zend-http": "2.*",
                 "zendframework/zend-loader": "2.*",
                 "zendframework/zend-modulemanager": "2.*",
                 "zendframework/zend-mvc": "2.*",
-                "zendframework/zend-serializer": "2.*",
                 "zendframework/zend-servicemanager": "2.*",
-                "zendframework/zend-stdlib": "2.*",
-                "zendframework/zend-view": "2.*"
+                "zendframework/zend-stdlib": "2.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "1.5.*",
+                "zendframework/zendframework": "2.*"
             },
             "type": "library",
             "autoload": {
@@ -176,7 +175,7 @@
                 "zend framework 2",
                 "zf2"
             ],
-            "time": "2013-12-05 22:17:38"
+            "time": "2014-03-28 19:32:51"
         },
         {
             "name": "symfony/process",
@@ -396,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "edf8279f69fd7f2dabec7f7e7fc7ba722e2ffb62"
+                "reference": "96104f2a0ac6c4fdfdbec12760d607413511d5e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/edf8279f69fd7f2dabec7f7e7fc7ba722e2ffb62",
-                "reference": "edf8279f69fd7f2dabec7f7e7fc7ba722e2ffb62",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/96104f2a0ac6c4fdfdbec12760d607413511d5e3",
+                "reference": "96104f2a0ac6c4fdfdbec12760d607413511d5e3",
                 "shasum": ""
             },
             "require": {
@@ -439,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-03-30 21:20:12"
+            "time": "2014-03-31 13:21:04"
         }
     ],
     "packages-dev": [
