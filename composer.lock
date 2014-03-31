@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "1d314e86ba5a2a09e597167cd8120dba2bf49e30"
+                "reference": "69ff2d2cf2581c8bbe8015a7608d78ec4c999a61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/1d314e86ba5a2a09e597167cd8120dba2bf49e30",
-                "reference": "1d314e86ba5a2a09e597167cd8120dba2bf49e30",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/69ff2d2cf2581c8bbe8015a7608d78ec4c999a61",
+                "reference": "69ff2d2cf2581c8bbe8015a7608d78ec4c999a61",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-03-31 17:24:03"
+            "time": "2014-03-31 17:35:34"
         }
     ],
     "packages-dev": [
