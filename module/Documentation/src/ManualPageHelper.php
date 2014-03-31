@@ -83,11 +83,15 @@ class ManualPageHelper implements HelperInterface
     public function rewriteLinks($matches)
     {
         $attr = $matches['attr'];
-        $link = '/' . preg_replace('#^(?:asset/)?(.*?)(?:\.md)?$#', '$1', $matches['link']);
+        $link = '/' . preg_replace('%^(?:asset/)?(.*?)(?:\.md)?(?P<anchor>#[a-z0-9_-]+)?$%i', '$1', $matches['link']);
 
         // Non-asset link needs to be relative to documentation route
         if (0 !== strpos($matches['link'], 'asset/')) {
             $link = $this->url->__invoke('documentation') . $link;
+        }
+
+        if (isset($matches['anchor']) && !empty($matches['anchor'])) {
+            $link .= $matches['anchor'];
         }
 
         return sprintf('%s="%s"', $attr, $link);
