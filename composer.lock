@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6073b673010763c7e85a06c5fe61d0f4",
+    "hash": "1c0d13824227d0ba2f6b1398adcbf3b6",
     "packages": [
         {
             "name": "erusev/parsedown",
-            "version": "0.9.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "d29ff18299210b52a75a631a70963e7c8b35b04f"
+                "reference": "c10bde01746867e2afbc715a6149f4e682f0263b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/d29ff18299210b52a75a631a70963e7c8b35b04f",
-                "reference": "d29ff18299210b52a75a631a70963e7c8b35b04f",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/c10bde01746867e2afbc715a6149f4e682f0263b",
+                "reference": "c10bde01746867e2afbc715a6149f4e682f0263b",
                 "shasum": ""
             },
             "type": "library",
@@ -42,7 +42,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-02-06 12:16:14"
+            "time": "2014-03-24 21:08:52"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "96104f2a0ac6c4fdfdbec12760d607413511d5e3"
+                "reference": "1d314e86ba5a2a09e597167cd8120dba2bf49e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/96104f2a0ac6c4fdfdbec12760d607413511d5e3",
-                "reference": "96104f2a0ac6c4fdfdbec12760d607413511d5e3",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/1d314e86ba5a2a09e597167cd8120dba2bf49e30",
+                "reference": "1d314e86ba5a2a09e597167cd8120dba2bf49e30",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-03-31 13:21:04"
+            "time": "2014-03-31 17:24:03"
         }
     ],
     "packages-dev": [
@@ -449,6 +449,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "erusev/parsedown": 20,
         "zfcampus/apigility-documentation": 20
     },
     "platform": {
