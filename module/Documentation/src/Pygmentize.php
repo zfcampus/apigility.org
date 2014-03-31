@@ -23,9 +23,6 @@ class Pygmentize
 
         $lexer = strtolower($lexer);
         switch ($lexer) {
-            case 'bash':
-                $lexer = 'console';
-                break;
             case 'php':
                 $options .= ' -P startinline=True';
                 break;
