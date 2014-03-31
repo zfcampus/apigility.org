@@ -7,12 +7,18 @@
 namespace Documentation;
 
 use AgParsedown\AgParsedown;
+use Zend\Filter\FilterChain;
 use Zend\View\Helper\HelperInterface;
 use Zend\View\Helper\Url as UrlHelper;
 use Zend\View\Renderer\RendererInterface;
 
 class ManualPageHelper implements HelperInterface
 {
+    /**
+     * @var FilterChain;
+     */
+    protected $anchorFilterChain;
+
     /**
      * @var AgParsedown
      */
@@ -62,6 +68,9 @@ class ManualPageHelper implements HelperInterface
         // transform links
         $html = preg_replace_callback('#(?P<attr>src|href)="/(?P<link>[^"]+)"#s', array($this, 'rewriteLinks'), $html);
 
+        // add anchors to headers
+        $html = preg_replace_callback('#<(?P<header>h[1-4])>(?P<content>.*?)</\1>#s', array($this, 'addAnchorsToHeaders'), $html);
+
         return $html;
     }
 
@@ -80,7 +89,7 @@ class ManualPageHelper implements HelperInterface
      * @param array $matches 
      * @return string
      */
-    public function rewriteLinks($matches)
+    public function rewriteLinks(array $matches)
     {
         $attr = $matches['attr'];
         $link = '/' . preg_replace('%^(?:asset/)?(.*?)(?:\.md)?(?P<anchor>#[a-z0-9_-]+)?$%i', '$1', $matches['link']);
@@ -95,6 +104,38 @@ class ManualPageHelper implements HelperInterface
         }
 
         return sprintf('%s="%s"', $attr, $link);
+    }
+
+    /**
+     * @param array $matches 
+     * @return string
+     */
+    public function addAnchorsToHeaders(array $matches)
+    {
+        $header  = $matches['header'];
+        $content = $matches['content'];
+        $name    = $this->getAnchorFilterChain()->filter($content);
+
+        return sprintf('<%s><a name="%s"></a>%s</%s>', $header, $name, $content, $header);
+    }
+
+    /**
+     * @return FilterChain
+     */
+    protected function getAnchorFilterChain()
+    {
+        if ($this->anchorFilterChain instanceof FilterChain) {
+            return $this->anchorFilterChain;
+        }
+
+        $chain = new FilterChain();
+        $chain->attachByName('StripTags');
+        $chain->attachByName('PregReplace', array('pattern' => '/[^a-z0-9_ -]/i', 'replacement' => ''));
+        $chain->attachByName('Word\SeparatorToDash'); // Uses " " as separator by default
+        $chain->attachByName('StringToLower');
+
+        $this->anchorFilterChain = $chain;
+        return $this->anchorFilterChain;
     }
 
     /**
