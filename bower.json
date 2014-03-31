@@ -1,0 +1,8 @@
+{
+  "name": "apigility.org",
+  "version": "1.0.0beta2",
+  "dependencies": {
+    "modernizr": "~2.7.2"
+  },
+  "private": true
+}
