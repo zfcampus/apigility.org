@@ -6,9 +6,17 @@
         "zf2"
     ],
     "homepage": "http://apigility.org",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/zfcampus/apigility-documentation.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.23",
-        "erusev/parsedown": ">=0.9.4",
-        "zendframework/zendframework": "=2.3.0"
+        "erusev/parsedown": "dev-master",
+        "rwoverdijk/assetmanager": "~1.3",
+        "zendframework/zendframework": "=2.3.0",
+        "zfcampus/apigility-documentation": "~1.0-dev"
     }
 }

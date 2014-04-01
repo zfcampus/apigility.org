@@ -32,29 +32,6 @@ return array(
         			),
         		),
         	),
-        	'doc' => array(
-        			'type' => 'Zend\Mvc\Router\Http\Literal',
-        			'options' => array(
-        					'route'    => '/documentation',
-        					'defaults' => array(
-        							'controller' => 'Application\Controller\Documentation',
-        							'action'     => 'index',
-        					),
-        			),
-        			'may_terminate' => true,
-        			'child_routes' => array(
-        					'install' => array(
-        							'type' => 'Zend\Mvc\Router\Http\Literal',
-        							'options' => array(
-        									'route' => '/install',
-        									'defaults' => array(
-        											'controller' => 'Application\Controller\Documentation',
-        											'action'     => 'install',
-        									),
-        							),
-        					),
-        			),
-        	),
         	'download' => array(
         			'type' => 'Zend\Mvc\Router\Http\Literal',
         			'options' => array(
@@ -102,11 +79,11 @@ return array(
              ),
              array(
              		'label' => 'Documentation',
-             		'route' => 'doc',
+             		'route' => 'documentation',
              		'pages' => array(
              				array(
-             						'label' => 'Installation',
-             						'route' => 'doc/install'
+             						'label' => 'Manual',
+             						'route' => 'documentation/page'
              				)
              		)
              ),
@@ -153,7 +130,6 @@ return array(
             'Application\Controller\Home' => 'Application\Controller\HomeController',
             'Application\Controller\Video' => 'Application\Controller\VideoController',
             'Application\Controller\Contacts' => 'Application\Controller\ContactsController',
-            'Application\Controller\Documentation' => 'Application\Controller\DocumentationController'
         ),
     ),
     'view_manager' => array(

@@ -1,0 +1,9 @@
+<aside class="toc">
+<?php 
+    $toc     = $this->manualpage('TOC', $this->model, false);
+    $baseUri = $this->url('documentation', array(), false);
+    $current = sprintf('%s/%s', $baseUri, $this->current);
+    $toc     = preg_replace('#<li>(<a href="' . $current . '")#s', '<li class="current">$1', $toc);
+    echo $toc;
+?>
+</aside>
