@@ -817,10 +817,16 @@ aside h4, aside.toc h2 {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 700;
-	padding: 0 0 10px 30px;
+	padding: 0 0 0 30px;
 	margin-left: -30px;
+    margin-top: 1em;
 	display: inline-block;
 	border-bottom: 1px solid #013755;
+    width: 100%;
+}
+
+aside.toc ul {
+    margin-bottom: 1em;
 }
 
 aside.toc h1 {
@@ -1150,7 +1156,7 @@ blockquote {
 /* Tables */
 table {
 	width: 100%;
-	background: #555;
+	background: #FFF;
 	margin: .5em 0;
 	border-radius: 5px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
