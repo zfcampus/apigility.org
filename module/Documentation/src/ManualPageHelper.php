@@ -59,7 +59,7 @@ class ManualPageHelper implements HelperInterface
 
         // highlight fenced code blocks
         if ($highlightContents) {
-            $contents = preg_replace_callback("#\n\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)\n\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
+            $contents = preg_replace_callback("#(?P<prefix>\n\s*)\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)(?P<suffix>\n\s*)\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
         }
 
         // transform markdown to HTML
@@ -80,9 +80,11 @@ class ManualPageHelper implements HelperInterface
      */
     public function highlightFencedBlock(array $matches)
     {
-        $lexer = $matches['lexer'];
-        $code  = $matches['code'];
-        return $this->pygmentize->transform($lexer, $code);
+        $prefix = $matches['prefix'];
+        $lexer  = $matches['lexer'];
+        $code   = $matches['code'];
+        $suffix = $matches['suffix'];
+        return $prefix . $this->pygmentize->transform($lexer, $code) . $suffix;
     }
 
     /**
