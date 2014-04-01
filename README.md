@@ -16,6 +16,8 @@ This will update:
 
 - `config/autoload/global.php`
 - `data/releases.json`
+- `composer.phar` (if out-of-date)
+- `composer.lock` (if the documentation was updated)
 
 Spot-check those, commit, and push.
 
@@ -53,7 +55,7 @@ and the apigility.org website consumes that documentation. To update the
 documentation to display on the website, run:
 
 ```console
-$ composer update
+$ make documentation
 ```
 
 and commit the `composer.lock` when done.

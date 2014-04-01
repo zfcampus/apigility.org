@@ -27,7 +27,7 @@ INSTALL_RELEASE ?= $(CURDIR)/bin/install.php
 
 all : release
 
-release: update-config github
+release: update-config github documentation
 
 update-config: check-version
 	@echo "Updating version to $(VERSION)..."
@@ -39,6 +39,16 @@ github:
 	@echo "Updating release changelogs..."
 	- $(PHP) $(BIN)/get-releases.php
 	@echo "[DONE] Updating release changelogs"
+
+composer:
+	@echo "Updating composer.phar"
+	- $(PHP) composer.phar self-update
+	@echo "[DONE] Updating composer.phar"
+
+documentation: composer
+	@echo "Updating documentation..."
+	- $(PHP) composer.phar update zfcampus/apigility-documentation
+	@echo "[DONE] Updating documentation"
 
 check-version:
 ifeq ($(VERSION),false)
