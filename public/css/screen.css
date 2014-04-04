@@ -1753,7 +1753,7 @@ img.download {
 	user-select: none;
 }
 
-.post-content img {
+section.manual img {
     width: 100%;
 }
 
