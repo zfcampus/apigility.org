@@ -179,17 +179,17 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.4.2",
+            "version": "v2.4.3",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "c175448bac997556f8ab972908a4e14c7291fb03"
+                "reference": "c09c3b08455c35688eee3e481fdfc85518ef01d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/c175448bac997556f8ab972908a4e14c7291fb03",
-                "reference": "c175448bac997556f8ab972908a4e14c7291fb03",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/c09c3b08455c35688eee3e481fdfc85518ef01d7",
+                "reference": "c09c3b08455c35688eee3e481fdfc85518ef01d7",
                 "shasum": ""
             },
             "require": {
@@ -224,7 +224,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-11 13:52:09"
+            "time": "2014-03-26 11:35:33"
         },
         {
             "name": "zendframework/zendframework",
@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "cf48f340a4a822674fd42054d05706ea41593a7f"
+                "reference": "03f2a9a515a9c17c9f3c65046d979f92c64ce009"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/cf48f340a4a822674fd42054d05706ea41593a7f",
-                "reference": "cf48f340a4a822674fd42054d05706ea41593a7f",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/03f2a9a515a9c17c9f3c65046d979f92c64ce009",
+                "reference": "03f2a9a515a9c17c9f3c65046d979f92c64ce009",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-04-03 17:54:04"
+            "time": "2014-04-05 15:18:01"
         }
     ],
     "packages-dev": [
