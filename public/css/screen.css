@@ -629,7 +629,7 @@ body>footer a:hover img {
 	text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
 }
 
-.quickstart .code {
+.quickstart .code, .manual .code {
 	font-size: 16px;
 	display: block;
 	margin: 0 0 -30px;
@@ -648,7 +648,7 @@ body>footer a:hover img {
 	}
 }
 /* Code */
-.quickstart .code {
+.quickstart .code, .manual .code {
 	display: block;
 	padding: 0;
 	font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono",
@@ -656,7 +656,7 @@ body>footer a:hover img {
 	line-height: 1.3em;
 }
 
-.quickstart .code .title {
+.quickstart .code .title, .manual .code .title {
 	display: block;
 	text-align: center;
 	margin: 0 20px;
@@ -683,7 +683,7 @@ body>footer a:hover img {
 	border-bottom: 1px solid #111;
 }
 
-.quickstart .code .shell {
+.quickstart .code .shell, .manual .code .shell {
     overflow: auto;
 	padding: 20px;
 	text-shadow: none;
@@ -693,17 +693,17 @@ body>footer a:hover img {
 	box-shadow: 0 5px 30px rgba(0, 0, 0, .3);
 }
 
-.quickstart .code .line {
+.quickstart .code .line, .manual .code .line {
 	display: block;
 	margin: 0;
 	padding: 0;
 }
 
-.quickstart .code .line span {
+.quickstart .code .line span, .manual .code .line span {
 	display: inline-block;
 }
 
-.quickstart .code .path {
+.quickstart .code .path, .manual .code .path {
 	color: #87ceeb;
 	-webkit-user-select: none;
 	/* Chrome all / Safari all */
@@ -715,7 +715,7 @@ body>footer a:hover img {
 	user-select: none;
 }
 
-.quickstart .code .prompt {
+.quickstart .code .prompt, .manual .code .prompt {
 	color: #cd5c5c;
 	-webkit-user-select: none;
 	/* Chrome all / Safari all */
@@ -727,11 +727,11 @@ body>footer a:hover img {
 	user-select: none;
 }
 
-.quickstart .code .command {
+.quickstart .code .command, .manual .code .command {
 	color: #f0e68c;
 }
 
-.quickstart .code .output {
+.quickstart .code .output, .manual .code .output {
 	color: #888;
 }
 /* Platforms */
@@ -1077,8 +1077,10 @@ pre,code {
 
 .highlight,pre>code[class*='language-'] {
 	padding: 10px 0;
-	width: 100%;
 	overflow: auto;
+    width: auto !important;
+    left: 0;
+    right: 0;
 }
 /* HTML Elements */
 h1,h2,h3,h4,h5,h6 {
@@ -1158,7 +1160,15 @@ blockquote {
 	font-style: italic;
 	font-size: 18px;
 	font-weight: 500;
+    width: auto;
+    left: 0;
+    right: 0;
 }
+
+.manual blockquote h4 {
+	color: #007200;
+}
+
 /* Tables */
 table {
 	width: 100%;

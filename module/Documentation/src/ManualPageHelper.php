@@ -59,7 +59,7 @@ class ManualPageHelper implements HelperInterface
 
         // highlight fenced code blocks
         if ($highlightContents) {
-            $contents = preg_replace_callback("#(?P<prefix>\n\s*)\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)(?P<suffix>\n\s*)\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
+            $contents = preg_replace_callback("#(?P<prefix>\n(?:\>)?\s*)\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)(?P<suffix>\n(?:\>)?\s*)\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
         }
 
         // transform markdown to HTML
@@ -84,6 +84,12 @@ class ManualPageHelper implements HelperInterface
         $lexer  = $matches['lexer'];
         $code   = $matches['code'];
         $suffix = $matches['suffix'];
+
+        // Strip blockquote strings if found
+        if (strstr($prefix, '> ')) {
+            $code = preg_replace('#^\> #m', '', $code);
+        }
+
         return $prefix . $this->pygmentize->transform($lexer, $code) . $suffix;
     }
 
