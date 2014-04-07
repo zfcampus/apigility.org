@@ -849,6 +849,9 @@ aside ul:first-child {
 
 aside li {
 	list-style-type: none;
+	line-height: 0.7em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 aside li a {
