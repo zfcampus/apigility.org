@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1c0d13824227d0ba2f6b1398adcbf3b6",
+    "hash": "d46fd12f5b5e84b0127a26da63b8d9cd",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "c10bde01746867e2afbc715a6149f4e682f0263b"
+                "reference": "60819541858f9da6fcb77e8bd09693635553d3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/c10bde01746867e2afbc715a6149f4e682f0263b",
-                "reference": "c10bde01746867e2afbc715a6149f4e682f0263b",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/60819541858f9da6fcb77e8bd09693635553d3ef",
+                "reference": "60819541858f9da6fcb77e8bd09693635553d3ef",
                 "shasum": ""
             },
             "type": "library",
@@ -42,7 +42,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-03-24 21:08:52"
+            "time": "2014-04-17 21:19:22"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "7fedb359ddf93bafdca964d96160e1da6d937ec6"
+                "reference": "f678a341099b314e9a903bca3946f0f121dc851d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/7fedb359ddf93bafdca964d96160e1da6d937ec6",
-                "reference": "7fedb359ddf93bafdca964d96160e1da6d937ec6",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/f678a341099b314e9a903bca3946f0f121dc851d",
+                "reference": "f678a341099b314e9a903bca3946f0f121dc851d",
                 "shasum": ""
             },
             "require": {
@@ -438,11 +438,55 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-04-16 14:20:18"
+            "time": "2014-04-18 16:28:36"
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "zfcampus/zf-deploy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zfcampus/zf-deploy.git",
+                "reference": "952ae84f18226edd7ebcfae75fa7110816fb689c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/952ae84f18226edd7ebcfae75fa7110816fb689c",
+                "reference": "952ae84f18226edd7ebcfae75fa7110816fb689c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-console": "~2.0"
+            },
+            "bin": [
+                "bin/zfdeploy.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZF\\Deploy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Deployment tool for ZF2 application",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "apigility",
+                "zend",
+                "zf2"
+            ],
+            "time": "2014-04-18 15:35:29"
+        }
     ],
     "aliases": [
 
@@ -450,7 +494,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "erusev/parsedown": 20,
-        "zfcampus/apigility-documentation": 20
+        "zfcampus/apigility-documentation": 20,
+        "zfcampus/zf-deploy": 20
     },
     "platform": {
         "php": ">=5.3.23"

@@ -18,5 +18,8 @@
         "rwoverdijk/assetmanager": "~1.3",
         "zendframework/zendframework": "=2.3.0",
         "zfcampus/apigility-documentation": "~1.0-dev"
+    },
+    "require-dev": {
+        "zfcampus/zf-deploy": "~1.0-dev"
     }
 }
