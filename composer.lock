@@ -448,12 +448,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/zf-deploy.git",
-                "reference": "952ae84f18226edd7ebcfae75fa7110816fb689c"
+                "reference": "2eec8bc367aa34a6e3d5887c77d81afbd507c4cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/952ae84f18226edd7ebcfae75fa7110816fb689c",
-                "reference": "952ae84f18226edd7ebcfae75fa7110816fb689c",
+                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/2eec8bc367aa34a6e3d5887c77d81afbd507c4cc",
+                "reference": "2eec8bc367aa34a6e3d5887c77d81afbd507c4cc",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2014-04-18 15:35:29"
+            "time": "2014-04-18 18:51:58"
         }
     ],
     "aliases": [
