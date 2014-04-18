@@ -81,3 +81,22 @@ anything. If it is on any other path, add the following to your
 ```php
 'pygmentize' => 'path/to/pygmentize'
 ```
+
+Deployment
+----------
+
+To deploy, first use `zf-deploy` to package the zpk file:
+
+```console
+$ ./vendor/bin/zf-deploy.php ../apigility.zpk -z zpk
+```
+
+Next, use the [Zend Server SDK](https://github.com/zend-patterns/ZendServerSDK)
+to deploy the application; the following assumes that you know the application
+ID and have properly setup a target for the Zend Server instance we deploy to:
+
+```console
+$ zs-client.phar applicationUpdate --appId=<id> --appPackage=../apigility.zpk --target=apigility
+```
+
+This will update the existing application, and clear cache rules.
