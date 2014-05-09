@@ -25,5 +25,5 @@
  *   empty. This is useful to detect update scenarios and handle upgrades / downgrades
  *   in hook scripts
  */  
-page_cache_remove_cached_contents('http://apigility.org/documentation/.*');
-page_cache_remove_cached_contents('http://www.apigility.org/documentation/.*');
+page_cache_remove_cached_contents('https://apigility.org/documentation/.*');
+page_cache_remove_cached_contents('https://www.apigility.org/documentation/.*');
