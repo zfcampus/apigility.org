@@ -20,7 +20,7 @@
         "zfcampus/apigility-documentation": "~1.0-dev"
     },
     "require-dev": {
-        "zfcampus/zf-console": "~1.0-dev",
-        "zfcampus/zf-deploy": "~1.0-dev"
+        "zfcampus/zf-console": "~1.0",
+        "zfcampus/zf-deploy": "~1.0"
     }
 }
