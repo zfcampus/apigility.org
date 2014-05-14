@@ -9,7 +9,7 @@
 $localPath    = __DIR__;
 $apigilityDir = 'apigility';
 $port         = '8888';
-$releaseUrl   = 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.0.0/zf-apigility-skeleton-1.0.0.zip';
+$releaseUrl   = 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.0.1/zf-apigility-skeleton-1.0.1.zip';
 $tmpFile      = sys_get_temp_dir() . '/apigility_' . md5($releaseUrl) . '.zip';
 
 checkPlatform();
