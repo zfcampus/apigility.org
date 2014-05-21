@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "4dde57451d3c278e0142cdb173abab8867987805"
+                "reference": "d24439ada0704948deef0d3eda2ea20fd8db1747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/4dde57451d3c278e0142cdb173abab8867987805",
-                "reference": "4dde57451d3c278e0142cdb173abab8867987805",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/d24439ada0704948deef0d3eda2ea20fd8db1747",
+                "reference": "d24439ada0704948deef0d3eda2ea20fd8db1747",
                 "shasum": ""
             },
             "type": "library",
@@ -42,7 +42,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-05-06 14:05:49"
+            "time": "2014-05-21 20:20:46"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "96bab34d395dff993c54c5871163e9f010d75a83"
+                "reference": "883476a0701d7a44c154dd6903805f0fb4102400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/96bab34d395dff993c54c5871163e9f010d75a83",
-                "reference": "96bab34d395dff993c54c5871163e9f010d75a83",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/883476a0701d7a44c154dd6903805f0fb4102400",
+                "reference": "883476a0701d7a44c154dd6903805f0fb4102400",
                 "shasum": ""
             },
             "require": {
@@ -439,7 +439,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-05-14 16:17:30"
+            "time": "2014-05-21 21:25:55"
         }
     ],
     "packages-dev": [
