@@ -88,7 +88,7 @@ Deployment
 To deploy, first use `zf-deploy` to package the zpk file:
 
 ```console
-$ ./vendor/bin/zfdeploy.php build ../apigility.zpk --zpkdata zpk
+$ ./vendor/bin/zf-deploy.php build ../apigility.zpk --zpkdata zpk
 ```
 
 Next, use the [Zend Server SDK](https://github.com/zend-patterns/ZendServerSDK)
