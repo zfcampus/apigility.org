@@ -1063,6 +1063,10 @@ pre,code {
 	}
 }
 
+.highlight:hover {
+    width:130% !important;
+}
+
 .highlight,p>pre,p>code,p>nobr>code,li>code,h5>code,.note>code,pre>code[class*='language-'] {
 	background: #555555;
 	color: #fff;
