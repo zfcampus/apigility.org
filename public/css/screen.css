@@ -1065,6 +1065,7 @@ pre,code {
 
 .highlight:hover {
     width:130% !important;
+    z-index: 1000;
 }
 
 .highlight,p>pre,p>code,p>nobr>code,li>code,h5>code,.note>code,pre>code[class*='language-'] {
