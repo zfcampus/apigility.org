@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "d24439ada0704948deef0d3eda2ea20fd8db1747"
+                "reference": "e33ac1c56ea591f21b9cf2fa74356ef708d4e130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/d24439ada0704948deef0d3eda2ea20fd8db1747",
-                "reference": "d24439ada0704948deef0d3eda2ea20fd8db1747",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/e33ac1c56ea591f21b9cf2fa74356ef708d4e130",
+                "reference": "e33ac1c56ea591f21b9cf2fa74356ef708d4e130",
                 "shasum": ""
             },
             "type": "library",
@@ -43,7 +43,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-05-21 20:20:46"
+            "time": "2014-06-18 09:27:25"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -396,12 +396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "4b77af4ce1ecf28387c8ff8f34b49be3b61ff79f"
+                "reference": "1639e84904dd31699d73eb76611e322eaaf9260c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/4b77af4ce1ecf28387c8ff8f34b49be3b61ff79f",
-                "reference": "4b77af4ce1ecf28387c8ff8f34b49be3b61ff79f",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/1639e84904dd31699d73eb76611e322eaaf9260c",
+                "reference": "1639e84904dd31699d73eb76611e322eaaf9260c",
                 "shasum": ""
             },
             "require": {
@@ -440,7 +440,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-06-04 15:29:41"
+            "time": "2014-06-19 15:31:34"
         }
     ],
     "packages-dev": [
@@ -774,16 +774,16 @@
         },
         {
             "name": "zfcampus/zf-deploy",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/zf-deploy.git",
-                "reference": "fa2ab3c055e7aca1ae42a3c64ab5849fadce8de9"
+                "reference": "42150fe4bc46282c043e6a1f7882ec7f3a91c45e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/fa2ab3c055e7aca1ae42a3c64ab5849fadce8de9",
-                "reference": "fa2ab3c055e7aca1ae42a3c64ab5849fadce8de9",
+                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/42150fe4bc46282c043e6a1f7882ec7f3a91c45e",
+                "reference": "42150fe4bc46282c043e6a1f7882ec7f3a91c45e",
                 "shasum": ""
             },
             "require": {
@@ -794,7 +794,8 @@
                 "zfcampus/zf-console": "~1.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "*@dev"
+                "fabpot/php-cs-fixer": "*@dev",
+                "phpunit/phpunit": "3.7.*"
             },
             "bin": [
                 "bin/zfdeploy.php"
@@ -822,7 +823,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2014-06-04 15:26:00"
+            "time": "2014-06-05 16:12:58"
         }
     ],
     "aliases": [
