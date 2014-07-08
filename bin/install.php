@@ -55,7 +55,7 @@ echo "Installation complete.\n";
 if (version_compare(PHP_VERSION, '5.4.0') >= 0) {
     echo "Running PHP internal web server.\n";
     echo "Open your browser to http://localhost:$port, Ctrl-C to stop it.\n";
-    exec("php -S 0:$port -t public public/index.php");
+    exec("php -S 0.0.0.0:$port -t public public/index.php");
 } else {
     echo "I cannot execute the PHP internal web server, because you are running PHP < 5.4.\n";
     echo "You need to configure a web server to point the 'apigility/public' folder\n";
