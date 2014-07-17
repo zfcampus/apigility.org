@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ba92ae6bd542d03dfb564a10e1ecdf6",
+    "hash": "61f86b3dce3d8832a35d9fd0f9efdc66",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -180,17 +180,17 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.5.0",
+            "version": "v2.5.2",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "5d7d78e23894544740219e006320678cfa4cd45b"
+                "reference": "5e53efbf61a7fbf73c79e3e08feea50f64c20bfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/5d7d78e23894544740219e006320678cfa4cd45b",
-                "reference": "5d7d78e23894544740219e006320678cfa4cd45b",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/5e53efbf61a7fbf73c79e3e08feea50f64c20bfa",
+                "reference": "5e53efbf61a7fbf73c79e3e08feea50f64c20bfa",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +225,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 09:02:52"
+            "time": "2014-07-09 09:05:48"
         },
         {
             "name": "zendframework/zendframework",
@@ -392,16 +392,16 @@
         },
         {
             "name": "zfcampus/apigility-documentation",
-            "version": "dev-develop",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "1639e84904dd31699d73eb76611e322eaaf9260c"
+                "reference": "14809724a7d700aaba890d8a73425f1e439137e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/1639e84904dd31699d73eb76611e322eaaf9260c",
-                "reference": "1639e84904dd31699d73eb76611e322eaaf9260c",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/14809724a7d700aaba890d8a73425f1e439137e4",
+                "reference": "14809724a7d700aaba890d8a73425f1e439137e4",
                 "shasum": ""
             },
             "require": {
@@ -440,7 +440,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-06-19 15:31:34"
+            "time": "2014-07-17 17:16:18"
         }
     ],
     "packages-dev": [
@@ -723,16 +723,16 @@
         },
         {
             "name": "zfcampus/zf-console",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/zf-console.git",
-                "reference": "84a9108e8846e0369d5063fc140395e9a3105d2c"
+                "reference": "ac9b608b19399c7ee9dd64de70e6e32d61897323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-console/zipball/84a9108e8846e0369d5063fc140395e9a3105d2c",
-                "reference": "84a9108e8846e0369d5063fc140395e9a3105d2c",
+                "url": "https://api.github.com/repos/zfcampus/zf-console/zipball/ac9b608b19399c7ee9dd64de70e6e32d61897323",
+                "reference": "ac9b608b19399c7ee9dd64de70e6e32d61897323",
                 "shasum": ""
             },
             "require": {
@@ -741,7 +741,9 @@
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "*@dev",
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "3.7.*",
+                "zendframework/zend-filter": "~2.0",
+                "zendframework/zend-validator": "~2.0"
             },
             "suggest": {
                 "zendframework/zend-filter": "~2.0; Useful for filtering/normalizing argument values",
@@ -770,7 +772,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2014-06-04 15:20:23"
+            "time": "2014-07-15 19:08:28"
         },
         {
             "name": "zfcampus/zf-deploy",
