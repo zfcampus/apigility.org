@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "e33ac1c56ea591f21b9cf2fa74356ef708d4e130"
+                "reference": "9437766539f6f88e748e7b6183ea31f78e154df5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/e33ac1c56ea591f21b9cf2fa74356ef708d4e130",
-                "reference": "e33ac1c56ea591f21b9cf2fa74356ef708d4e130",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/9437766539f6f88e748e7b6183ea31f78e154df5",
+                "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },
             "type": "library",
@@ -43,7 +43,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-06-18 09:27:25"
+            "time": "2014-08-13 22:27:48"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -180,17 +180,17 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.5.2",
+            "version": "v2.5.3",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "5e53efbf61a7fbf73c79e3e08feea50f64c20bfa"
+                "reference": "e0997d2a9a1a763484b34b989900b61322a9b056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/5e53efbf61a7fbf73c79e3e08feea50f64c20bfa",
-                "reference": "5e53efbf61a7fbf73c79e3e08feea50f64c20bfa",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/e0997d2a9a1a763484b34b989900b61322a9b056",
+                "reference": "e0997d2a9a1a763484b34b989900b61322a9b056",
                 "shasum": ""
             },
             "require": {
@@ -213,19 +213,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:05:48"
+            "time": "2014-08-05 09:00:40"
         },
         {
             "name": "zendframework/zendframework",
@@ -396,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "39f9741ae47935d599cb39c8f2312e6733612e64"
+                "reference": "ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/39f9741ae47935d599cb39c8f2312e6733612e64",
-                "reference": "39f9741ae47935d599cb39c8f2312e6733612e64",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52",
+                "reference": "ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52",
                 "shasum": ""
             },
             "require": {
@@ -440,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-08-12 20:01:45"
+            "time": "2014-08-18 16:37:36"
         }
     ],
     "packages-dev": [
@@ -676,16 +674,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "7cd4c4965e17e6e4c07f26d566619a4c76f8c672"
+                "reference": "9cae56dbe34f4392e7d0f559474df33749a39f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/7cd4c4965e17e6e4c07f26d566619a4c76f8c672",
-                "reference": "7cd4c4965e17e6e4c07f26d566619a4c76f8c672",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9cae56dbe34f4392e7d0f559474df33749a39f8d",
+                "reference": "9cae56dbe34f4392e7d0f559474df33749a39f8d",
                 "shasum": ""
             },
             "require": {
@@ -696,8 +694,8 @@
             ],
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Seld\\JsonLint": "src/"
+                "psr-4": {
+                    "Seld\\JsonLint\\": "src/Seld/JsonLint/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -708,8 +706,7 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
+                    "homepage": "http://seld.be"
                 }
             ],
             "description": "JSON Linter",
@@ -719,20 +716,20 @@
                 "parser",
                 "validator"
             ],
-            "time": "2013-11-04 15:41:11"
+            "time": "2014-07-20 17:36:11"
         },
         {
             "name": "zfcampus/zf-console",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/zf-console.git",
-                "reference": "ac9b608b19399c7ee9dd64de70e6e32d61897323"
+                "reference": "48695221e80d81c33b5076e48c31c282616f080b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-console/zipball/ac9b608b19399c7ee9dd64de70e6e32d61897323",
-                "reference": "ac9b608b19399c7ee9dd64de70e6e32d61897323",
+                "url": "https://api.github.com/repos/zfcampus/zf-console/zipball/48695221e80d81c33b5076e48c31c282616f080b",
+                "reference": "48695221e80d81c33b5076e48c31c282616f080b",
                 "shasum": ""
             },
             "require": {
@@ -772,20 +769,20 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2014-07-15 19:08:28"
+            "time": "2014-07-24 20:04:37"
         },
         {
             "name": "zfcampus/zf-deploy",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/zf-deploy.git",
-                "reference": "42150fe4bc46282c043e6a1f7882ec7f3a91c45e"
+                "reference": "fa641068c6dd237d9ce374e7253a6e7f058a02c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/42150fe4bc46282c043e6a1f7882ec7f3a91c45e",
-                "reference": "42150fe4bc46282c043e6a1f7882ec7f3a91c45e",
+                "url": "https://api.github.com/repos/zfcampus/zf-deploy/zipball/fa641068c6dd237d9ce374e7253a6e7f058a02c3",
+                "reference": "fa641068c6dd237d9ce374e7253a6e7f058a02c3",
                 "shasum": ""
             },
             "require": {
@@ -825,7 +822,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2014-06-05 16:12:58"
+            "time": "2014-07-15 21:12:14"
         }
     ],
     "aliases": [
