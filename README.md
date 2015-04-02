@@ -88,12 +88,18 @@ Deployment
 The easiest way to deploy is to use the following:
 
 ```console
-$ make deploy VERSION=$(date -u +"%Y.%m.%d.%H.%M") PHP=$(which php)
+$ make deploy AG_VERSION=1.0.4 VERSION=$(date -u +"%Y.%m.%d.%H.%M") PHP=$(which php)
 ```
 
-(`VERSION` is explicitly provided to prevent re-calculation during execution of
+### Notes
+
+`AG_VERSION` is the current Apigility version to display on the download page
+and homepage; it should be whatever the latest version is in
+zfcampus/zf-apigility-skeleton.
+
+`VERSION` is explicitly provided to prevent re-calculation during execution of
 the scripts, which can lead to version mismatch after creating the package but
-before deployment.)
+before deployment.
 
 Some environment variables you may also need to add to the string:
 
