@@ -85,18 +85,19 @@ anything. If it is on any other path, add the following to your
 Deployment
 ----------
 
-To deploy, first use `zf-deploy` to package the zpk file:
+The easiest way to deploy is to use the following:
 
 ```console
-$ ./vendor/bin/zf-deploy.php build ../apigility.zpk --zpkdata zpk
+$ make deploy VERSION=$(date -u +"%Y.%m.%d.%H.%M") PHP=$(which php)
 ```
 
-Next, use the [Zend Server SDK](https://github.com/zend-patterns/ZendServerSDK)
-to deploy the application; the following assumes that you know the application
-ID and have properly setup a target for the Zend Server instance we deploy to:
+(`VERSION` is explicitly provided to prevent re-calculation during execution of
+the scripts, which can lead to version mismatch after creating the package but
+before deployment.)
 
-```console
-$ zs-client.phar applicationUpdate --appId=<id> --appPackage=../apigility.zpk --target=apigility
-```
+Some environment variables you may also need to add to the string:
 
-This will update the existing application, and clear cache rules.
+- `ZS_CLIENT`, if `zs-client.phar` is not on your `$PATH`
+- `APP_TARGET`, to point at a target you've created with `zs-client.phar` to
+  point at the appropriate Zend Server instance. (`zs-client.phar` is the
+  [Zend Server SDK](https://github.com/zend-patterns/ZendServerSDK).)
