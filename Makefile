@@ -6,13 +6,19 @@
 # - PHP - PHP executable to use, if not in path
 # - VERSION - version being released or added to site; required for all but
 #   homepage target
+# - ZS_CLIENT - path to zs-client.phar; set this if it's not on your $PATH
+# - APP_ID - application ID on Zend Server to deploy to; has a sane default
+# - APP_TARGET - zs-client API target that you have configured for Zend Server;
+#   defaults to "apigility"
 #
 # Available targets:
 # - github  - get release changelogs from github
 # - release - indicate a new Apigility release; also executes github target
-# - all     - currently, synonym for release target
+# - package - create a new ZPK
+# - package - deploy a ZPK
+# - all     - currently, synonym for deploy target
 
-VERSION ?= false
+VERSION ?= $(shell date -u +"%Y.%m.%d.%H.%M")
 PHP ?= /usr/local/zend/bin/php
 
 BIN = $(CURDIR)/bin
@@ -23,9 +29,13 @@ CONFIG_RELEASE ?= $(CURDIR)/config/autoload/global.php
 INSTALL_DIST ?= $(CURDIR)/bin/install.php.dist
 INSTALL_RELEASE ?= $(CURDIR)/bin/install.php
 
-.PHONY : all release github
+APP_ID ?= 10
+APP_TARGET ?= apigility
+ZS_CLIENT ?= zs-client.phar
 
-all : release
+.PHONY : all release github package deploy
+
+all : deploy
 
 release: update-config github documentation
 
@@ -49,6 +59,18 @@ documentation: composer
 	@echo "Updating documentation..."
 	- $(PHP) composer.phar update zfcampus/apigility-documentation
 	@echo "[DONE] Updating documentation"
+
+package: release
+	@echo "Creating ZPK..."
+	-$(CURDIR)/vendor/bin/zfdeploy.php build apigility-$(VERSION).zpk --zpkdata zpk --version $(VERSION)
+	@echo "[DONE] Creating ZPK"
+
+apigility-$(VERSION).zpk: package
+
+deploy: apigility-$(VERSION).zpk
+	@echo "Deploying ZPK..."
+	-$(ZS_CLIENT) applicationUpdate --appPackage=apigility-$(VERSION).zpk --appId=$(APP_ID) --target=$(APP_TARGET)
+	@echo "[DONE] Deploying ZPK"
 
 check-version:
 ifeq ($(VERSION),false)
