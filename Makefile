@@ -4,9 +4,11 @@
 #
 # Configurable variables:
 # - PHP - PHP executable to use, if not in path
-# - VERSION - version being released or added to site; required for all but
-#   homepage target
+# - AG_VERSION - Apiglity version being released or added to site; required for
+#   all but homepage target
 # - ZS_CLIENT - path to zs-client.phar; set this if it's not on your $PATH
+# - VERSION - version string to use for the deployment package; defaults to
+#   a date-time-formatted string.
 # - APP_ID - application ID on Zend Server to deploy to; has a sane default
 # - APP_TARGET - zs-client API target that you have configured for Zend Server;
 #   defaults to "apigility"
@@ -18,8 +20,8 @@
 # - package - deploy a ZPK
 # - all     - currently, synonym for deploy target
 
-VERSION ?= $(shell date -u +"%Y.%m.%d.%H.%M")
 PHP ?= /usr/local/zend/bin/php
+AG_VERSION ?= false
 
 BIN = $(CURDIR)/bin
 
@@ -31,6 +33,7 @@ INSTALL_RELEASE ?= $(CURDIR)/bin/install.php
 
 APP_ID ?= 10
 APP_TARGET ?= apigility
+VERSION ?= $(shell date -u +"%Y.%m.%d.%H.%M")
 ZS_CLIENT ?= zs-client.phar
 
 .PHONY : all release github package deploy
@@ -40,9 +43,9 @@ all : deploy
 release: update-config github documentation
 
 update-config: check-version
-	@echo "Updating version to $(VERSION)..."
-	- sed s/%VERSION%/$(VERSION)/g $(CONFIG_DIST) > $(CONFIG_RELEASE)
-	- sed s/%VERSION%/$(VERSION)/g $(INSTALL_DIST) > $(INSTALL_RELEASE)
+	@echo "Updating version to $(AG_VERSION)..."
+	- sed s/%VERSION%/$(AG_VERSION)/g $(CONFIG_DIST) > $(CONFIG_RELEASE)
+	- sed s/%VERSION%/$(AG_VERSION)/g $(INSTALL_DIST) > $(INSTALL_RELEASE)
 	@echo "[DONE] Updating version"
 
 github:
@@ -73,7 +76,7 @@ deploy: apigility-$(VERSION).zpk
 	@echo "[DONE] Deploying ZPK"
 
 check-version:
-ifeq ($(VERSION),false)
-	@echo "Missing VERSION assignment on commandline"
+ifeq ($(AG_VERSION),false)
+	@echo "Missing AG_VERSION assignment on commandline"
 	exit 1
 endif
