@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52"
+                "reference": "c9cfee97806ea14b739aef95ee5014143aeab9b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52",
-                "reference": "ae3f740e342ceea33bbcfc3ea9b6af2944b7ec52",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/c9cfee97806ea14b739aef95ee5014143aeab9b0",
+                "reference": "c9cfee97806ea14b739aef95ee5014143aeab9b0",
                 "shasum": ""
             },
             "require": {
@@ -412,8 +412,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-develop": "1.1-dev"
+                    "dev-master": "1.1-dev",
+                    "dev-develop": "1.2-dev"
                 }
             },
             "autoload": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2014-08-18 16:37:36"
+            "time": "2015-04-20 14:46:53"
         }
     ],
     "packages-dev": [
@@ -825,19 +825,16 @@
             "time": "2014-07-15 21:12:14"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "erusev/parsedown": 20,
         "zfcampus/apigility-documentation": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.23"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
