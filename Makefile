@@ -63,6 +63,17 @@ documentation: composer
 	- $(PHP) composer.phar update zfcampus/apigility-documentation
 	@echo "[DONE] Updating documentation"
 
+videos:
+	@echo "Generating video page..."
+ifeq ($(YT_KEY),)
+	@echo "Youtube API key not defined, exiting..."
+	exit 1
+else
+	- $(PHP) $(BIN)/youtube.php --key=$(YT_KEY)
+	@echo "[DONE] generating video page"
+endif
+
+
 package: release
 	@echo "Creating ZPK..."
 	-$(CURDIR)/vendor/bin/zfdeploy.php build apigility-$(VERSION).zpk --zpkdata zpk --version $(VERSION)

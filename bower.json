@@ -2,8 +2,10 @@
   "name": "apigility.org",
   "version": "1.0.0beta2",
   "dependencies": {
+    "jquery":"~2.1",
     "modernizr": "~2.7.2",
-    "zepto": "~1.1.3"
+    "zepto": "~1.1.3",
+    "mediaelement": "~2.16"
   },
   "private": true
 }
