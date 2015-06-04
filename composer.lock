@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "61f86b3dce3d8832a35d9fd0f9efdc66",
@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/9437766539f6f88e748e7b6183ea31f78e154df5",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/790066e9a7dbac9b1441005b902531ec9de0ed00",
                 "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },
@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "c9cfee97806ea14b739aef95ee5014143aeab9b0"
+                "reference": "3e7ee53bfdfe86f327763d52410333d560441af2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/c9cfee97806ea14b739aef95ee5014143aeab9b0",
-                "reference": "c9cfee97806ea14b739aef95ee5014143aeab9b0",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/3e7ee53bfdfe86f327763d52410333d560441af2",
+                "reference": "3e7ee53bfdfe86f327763d52410333d560441af2",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2015-04-20 14:46:53"
+            "time": "2015-06-04 14:47:08"
         }
     ],
     "packages-dev": [
