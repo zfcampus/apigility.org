@@ -1,7 +1,7 @@
 <section class="features">
 	<div class="grid" style="margin-top:30px">
         <div class="whole">
-            <h1 id="pageTitle">Video</h1>
+            <h1 id="pageTitle"><?php echo $this->mainVideo['title'] ?></h1>
         </div>
     </div>
 
@@ -10,7 +10,7 @@
     <div class="grid" style="padding-left: 10px; margin-top: 20px;">
         <div class="videoContent">
             <video id="agPlayer" controls preload="none" width="960" height="540" style="width: 100%; height: 100%;">
-                <source src="http://www.youtube.com/watch?v=9L9wf12t370" type="video/youtube">
+                <source src="http://www.youtube.com/watch?v=<?php echo $this->mainVideo['id'] ?>" type="video/youtube">
             </video>
         </div>
     </div>

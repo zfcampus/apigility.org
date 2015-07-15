@@ -37,6 +37,7 @@ if (isset($opts->k)) {
         'maxResults' => 50,
         'playlistId' => 'PL8XToL5Ut_4yXlovH3oCmLNNxIT5RNH4w',
     ));
+    //var_dump($playlistItemsResponse['items']);
 
     $videoPath = __DIR__ . '/../module/Application/view/application/video';
     $videos = array();
@@ -55,6 +56,7 @@ if (isset($opts->k)) {
 
         $videos[] = $video;
     }
+
     $renderer = new PhpRenderer();
     $resolver = new Resolver\TemplateMapResolver();
     $resolver->setMap(array(
@@ -64,7 +66,12 @@ if (isset($opts->k)) {
     ));
     $renderer->setResolver($resolver);
 
-    $model = new ViewModel(compact('videos'));
+    $mainVideo = array_shift($videos);
+
+    $model = new ViewModel(array(
+      'mainVideo' => $mainVideo,
+      'videos' => $videos,
+    ));
     $model->setTemplate('video/template');
 
     $html = $renderer->render($model);
