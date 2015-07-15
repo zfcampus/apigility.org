@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/790066e9a7dbac9b1441005b902531ec9de0ed00",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/28774a4359120d2e02e8b6285ed05670c1bc7053",
                 "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },
@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "3e7ee53bfdfe86f327763d52410333d560441af2"
+                "reference": "0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/3e7ee53bfdfe86f327763d52410333d560441af2",
-                "reference": "3e7ee53bfdfe86f327763d52410333d560441af2",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d",
+                "reference": "0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2015-06-04 14:47:08"
+            "time": "2015-07-15 17:41:05"
         }
     ],
     "packages-dev": [
@@ -447,12 +447,12 @@
             "version": "1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/herrera-io/php-json.git",
+                "url": "https://github.com/kherge-abandoned/php-json.git",
                 "reference": "60c696c9370a1e5136816ca557c17f82a6fa83f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/herrera-io/php-json/zipball/60c696c9370a1e5136816ca557c17f82a6fa83f1",
+                "url": "https://api.github.com/repos/kherge-abandoned/php-json/zipball/60c696c9370a1e5136816ca557c17f82a6fa83f1",
                 "reference": "60c696c9370a1e5136816ca557c17f82a6fa83f1",
                 "shasum": ""
             },
@@ -508,12 +508,12 @@
             "version": "1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/herrera-io/php-phar-update.git",
+                "url": "https://github.com/kherge-abandoned/php-phar-update.git",
                 "reference": "00a79e1d5b8cf3c080a2e3becf1ddf7a7fea025b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/herrera-io/php-phar-update/zipball/00a79e1d5b8cf3c080a2e3becf1ddf7a7fea025b",
+                "url": "https://api.github.com/repos/kherge-abandoned/php-phar-update/zipball/00a79e1d5b8cf3c080a2e3becf1ddf7a7fea025b",
                 "reference": "00a79e1d5b8cf3c080a2e3becf1ddf7a7fea025b",
                 "shasum": ""
             },
@@ -617,7 +617,7 @@
                 },
                 {
                     "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com",
+                    "email": "robert.schoenthal@gmail.com",
                     "homepage": "http://digitalkaoz.net"
                 }
             ],
@@ -634,12 +634,12 @@
             "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kherge-unmaintained/Version.git",
+                "url": "https://github.com/kherge-abandoned/Version.git",
                 "reference": "f07cf83f8ce533be8f93d2893d96d674bbeb7e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kherge-unmaintained/Version/zipball/f07cf83f8ce533be8f93d2893d96d674bbeb7e30",
+                "url": "https://api.github.com/repos/kherge-abandoned/Version/zipball/f07cf83f8ce533be8f93d2893d96d674bbeb7e30",
                 "reference": "f07cf83f8ce533be8f93d2893d96d674bbeb7e30",
                 "shasum": ""
             },
