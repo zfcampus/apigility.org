@@ -12,97 +12,97 @@ return array(
                     ),
                 ),
             ),
-        	'install' => array(
-        		'type' => 'Zend\Mvc\Router\Http\Segment',
-        		'options' => array(
-        			'route'    => '/install[/:version]',
-        			'defaults' => array(
-        				'controller' => 'Application\Controller\Home',
-        				'action'     => 'install'
-        			),
-              'constraints' => array(
-                'version' => '[0-9]+\.[0-9]+\.[0-9]+'
-              ),
-        		),
-        	),
-        	'video' => array(
-        		'type' => 'Zend\Mvc\Router\Http\Literal',
-        		'options' => array(
-        			'route'    => '/video',
-        			'defaults' => array(
-        				'controller' => 'Application\Controller\Video',
-        				'action'     => 'index',
-        			),
-        		),
-        	),
-        	'download' => array(
-        			'type' => 'Zend\Mvc\Router\Http\Literal',
-        			'options' => array(
-        					'route'    => '/download',
-        					'defaults' => array(
-        							'controller' => 'Application\Controller\Download',
-        							'action'     => 'index',
-        					),
-        			),
-        			'may_terminate' => true,
-        			'child_routes' => array(
-        					'note' => array(
-        							'type' => 'Zend\Mvc\Router\Http\Literal',
-        							'options' => array(
-        									'route' => '/note',
-        									'defaults' => array(
-        										'controller' => 'Application\Controller\Download',
-        										'action'     => 'note',
-        									),
-        							),
-        					),
-        			),
-        	),
-        	'contacts' => array(
-        			'type' => 'Zend\Mvc\Router\Http\Literal',
-        			'options' => array(
-        					'route'    => '/contacts',
-        					'defaults' => array(
-        							'controller' => 'Application\Controller\Contacts',
-        							'action'     => 'index',
-        					),
-        			),
-        	),
+            'install' => array(
+                'type' => 'Zend\Mvc\Router\Http\Segment',
+                'options' => array(
+                    'route'    => '/install[/:version]',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Home',
+                        'action'     => 'install'
+                    ),
+                    'constraints' => array(
+                        'version' => '[0-9]+\.[0-9]+\.[0-9]+'
+                    ),
+                ),
+            ),
+            'video' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/video',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Video',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+            'download' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/download',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Download',
+                        'action'     => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'note' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Literal',
+                        'options' => array(
+                            'route' => '/note',
+                            'defaults' => array(
+                                'controller' => 'Application\Controller\Download',
+                                'action'     => 'note',
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            'contacts' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/contacts',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Contacts',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
         ),
     ),
     'navigation' => array(
          'default' => array(
              array(
-                 'label' => 'Home',
-                 'route' => 'home',
+                'label' => 'Home',
+                'route' => 'home',
              ),
              array(
-             		'label' => 'Video',
-             		'route' => 'video',
+                'label' => 'Video',
+                'route' => 'video',
              ),
              array(
-             		'label' => 'Documentation',
-             		'route' => 'documentation',
-             		'pages' => array(
-             				array(
-             						'label' => 'Manual',
-             						'route' => 'documentation/page'
-             				)
-             		)
+                'label' => 'Documentation',
+                'route' => 'documentation',
+                'pages' => array(
+                    array(
+                        'label' => 'Manual',
+                        'route' => 'documentation/page',
+                    ),
+                ),
              ),
              array(
-             		'label' => 'Download',
-             		'route' => 'download',
-             		'pages' => array(
-             			array(
-             				'label' => 'Release note',
-             				'route' => 'download/note'
-             			)
-             		)
+                'label' => 'Download',
+                'route' => 'download',
+                'pages' => array(
+                    array(
+                        'label' => 'Release note',
+                        'route' => 'download/note',
+                    ),
+                ),
              ),
              array(
-             		'label' => 'Contacts',
-             		'route' => 'contacts',
+                'label' => 'Contacts',
+                'route' => 'contacts',
              ),
          ),
      ),
@@ -115,7 +115,7 @@ return array(
             'translator' => 'MvcTranslator',
         ),
         'factories' => array(
-        	'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
     'translator' => array(
