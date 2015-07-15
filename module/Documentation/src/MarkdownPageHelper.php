@@ -1,18 +1,18 @@
 <?php
 /**
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @copyright Copyright (c) 2014 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2015 Zend Technologies USA Inc. (http://www.zend.com)
  */
 
 namespace Documentation;
 
-use AgParsedown\AgParsedown;
+use League\CommonMark\CommonMarkConverter;
 use Zend\Filter\FilterChain;
 use Zend\View\Helper\HelperInterface;
 use Zend\View\Helper\Url as UrlHelper;
 use Zend\View\Renderer\RendererInterface;
 
-class ManualPageHelper implements HelperInterface
+class MarkdownPageHelper implements HelperInterface
 {
     /**
      * @var FilterChain;
@@ -20,14 +20,9 @@ class ManualPageHelper implements HelperInterface
     protected $anchorFilterChain;
 
     /**
-     * @var AgParsedown
+     * @var CommonMarkConverter
      */
-    protected $parsedown;
-
-    /**
-     * @var Pygmentize
-     */
-    protected $pygmentize;
+    protected $parser;
 
     /**
      * @var UrlHelper
@@ -35,13 +30,12 @@ class ManualPageHelper implements HelperInterface
     protected $url;
 
     /**
-     * @param AgParsedown $parsedown
+     * @param UrlHelper $url
      */
-    public function __construct(AgParsedown $parsedown, UrlHelper $url, Pygmentize $pygmentize)
+    public function __construct(UrlHelper $url)
     {
-        $this->parsedown  = $parsedown;
-        $this->url        = $url;
-        $this->pygmentize = $pygmentize;
+        $this->parser = new CommonMarkConverter;
+        $this->url    = $url;
     }
 
     /**
@@ -57,44 +51,37 @@ class ManualPageHelper implements HelperInterface
     {
         $contents = $model->getPageContents($page);
 
-        // highlight fenced code blocks
-        if ($highlightContents) {
-            $contents = preg_replace_callback("#(?P<prefix>\n(?:\>)?\s*)\`{3}(?P<lexer>[a-z0-9-]+)\n(?P<code>.*?)(?P<suffix>\n(?:\>)?\s*)\`{3}#is", array($this, 'highlightFencedBlock'), $contents);
-        }
-
         // transform markdown to HTML
-        $html = $this->parsedown->__invoke($contents);
+        $html = $this->parser->convertToHtml($contents);
+
+        // transform language-HTTP to language-http
+        $html = str_replace('language-HTTP', 'language-http', $html);
+
+        // transform language-JSON and language-json to language-javascript
+        $html = str_replace(array('language-JSON', 'language-json'), 'language-javascript', $html);
+
+        // transform language-console to language-bash
+        $html = str_replace('language-console', 'language-bash', $html);
 
         // transform links
-        $html = preg_replace_callback('#(?P<attr>src|href)="/(?P<link>[^"]+)"#s', array($this, 'rewriteLinks'), $html);
+        $html = preg_replace_callback(
+            '#(?P<attr>src|href)="/(?P<link>[^"]+)"#s',
+            array($this, 'rewriteLinks'),
+            $html
+        );
 
         // add anchors to headers
-        $html = preg_replace_callback('#<(?P<header>h[1-4])>(?P<content>.*?)</\1>#s', array($this, 'addAnchorsToHeaders'), $html);
+        $html = preg_replace_callback(
+            '#<(?P<header>h[1-4])>(?P<content>.*?)</\1>#s',
+            array($this, 'addAnchorsToHeaders'),
+            $html
+        );
 
         return $html;
     }
 
     /**
-     * @param array $matches 
-     * @return string
-     */
-    public function highlightFencedBlock(array $matches)
-    {
-        $prefix = $matches['prefix'];
-        $lexer  = $matches['lexer'];
-        $code   = $matches['code'];
-        $suffix = $matches['suffix'];
-
-        // Strip blockquote strings if found
-        if (strstr($prefix, '> ')) {
-            $code = preg_replace('#^\> #m', '', $code);
-        }
-
-        return $prefix . $this->pygmentize->transform($lexer, $code) . $suffix;
-    }
-
-    /**
-     * @param array $matches 
+     * @param array $matches
      * @return string
      */
     public function rewriteLinks(array $matches)
@@ -115,7 +102,7 @@ class ManualPageHelper implements HelperInterface
     }
 
     /**
-     * @param array $matches 
+     * @param array $matches
      * @return string
      */
     public function addAnchorsToHeaders(array $matches)
