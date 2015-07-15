@@ -17,16 +17,22 @@ class HomeController extends AbstractActionController
     public function indexAction()
     {
     	$config = $this->getServiceLocator()->get('Config');
-    	
+
         return new ViewModel(array(
         	'version'  => $config['apigility']['version'],
         	'zip' => $config['links']['zip']
         ));
     }
-    
+
     public function installAction()
     {
-    	$installer = file_get_contents(__DIR__ . '/../../../../../bin/install.php');
+      $version = $this->params()->fromRoute('version');
+      if (empty($version)) {
+    	   $installer = file_get_contents(__DIR__ . '/../../../../../bin/install.php');
+      } else {
+         $installer = file_get_contents(__DIR__ . '/../../../../../bin/install.php.dist');
+         $installer = str_replace('%VERSION%', $version, $installer);
+      }
 
     	return $this->getResponse()->setContent($installer);
     }

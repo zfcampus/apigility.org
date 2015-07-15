@@ -13,13 +13,16 @@ return array(
                 ),
             ),
         	'install' => array(
-        		'type' => 'Zend\Mvc\Router\Http\Literal',
+        		'type' => 'Zend\Mvc\Router\Http\Segment',
         		'options' => array(
-        			'route'    => '/install',
+        			'route'    => '/install[/:version]',
         			'defaults' => array(
         				'controller' => 'Application\Controller\Home',
-        				'action'     => 'install',
+        				'action'     => 'install'
         			),
+              'constraints' => array(
+                'version' => '[0-9]+\.[0-9]+\.[0-9]+'
+              ),
         		),
         	),
         	'video' => array(
