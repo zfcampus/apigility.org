@@ -57,11 +57,11 @@ class MarkdownPageHelper implements HelperInterface
         // transform language-HTTP to language-http
         $html = str_replace('language-HTTP', 'language-http', $html);
 
-        // transform language-JSON and language-json to language-javascript
-        $html = str_replace(array('language-JSON', 'language-json'), 'language-javascript', $html);
+        // transform language-JSON, language-json, and language-js to language-javascript
+        $html = str_replace(array('language-JSON', 'language-json', 'language-js'), 'language-javascript', $html);
 
-        // transform language-console to language-bash
-        $html = str_replace('language-console', 'language-bash', $html);
+        // transform language-console, language-sh to language-bash
+        $html = str_replace(array('language-console', 'language-sh'), 'language-bash', $html);
 
         // transform links
         $html = preg_replace_callback(
