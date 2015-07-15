@@ -7,9 +7,14 @@
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge') ?>
 
-	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                     ->prependStylesheet($this->basePath() . '/css/font.css')
-                     ->prependStylesheet($this->basePath() . '/css/screen.css') ?>
+    <?php echo $this
+            ->headLink(array(
+                'rel' => 'shortcut icon',
+                'type' => 'image/vnd.microsoft.icon',
+                'href' => $this->basePath() . '/img/favicon.ico'
+            ))
+            ->appendStylesheet($this->basePath() . '/css/font.css')
+            ->appendStylesheet($this->basePath() . '/css/screen.css') ?>
 
     <?php echo $this->headScript()
         ->prependFile($this->basePath('/bower_components/zepto/zepto.min.js'))

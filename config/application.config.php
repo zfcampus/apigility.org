@@ -4,7 +4,6 @@ return array(
     'modules' => array(
         'Application',
         'ApigilityDocumentation',
-        'AgParsedown',
         'AssetManager',
         'Documentation',
     ),

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61f86b3dce3d8832a35d9fd0f9efdc66",
+    "hash": "3f87c768d597e4e9531a107160795400",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -115,6 +115,67 @@
                 "minification"
             ],
             "time": "2013-07-19 00:03:27"
+        },
+        {
+            "name": "league/commonmark",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "8b681a57233f00578195573d7d251c2f143c1a5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/8b681a57233f00578195573d7d251c2f143c1a5d",
+                "reference": "8b681a57233f00578195573d7d251c2f143c1a5d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.8"
+            },
+            "replace": {
+                "colinodell/commonmark-php": "*"
+            },
+            "require-dev": {
+                "erusev/parsedown": "~1.0",
+                "jgm/commonmark": "0.20",
+                "michelf/php-markdown": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "symfony/finder": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\CommonMark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "http://www.colinodell.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Markdown parser for PHP based on the CommonMark spec",
+            "homepage": "https://github.com/thephpleague/commonmark",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-06-19 00:39:51"
         },
         {
             "name": "rwoverdijk/assetmanager",
@@ -394,12 +455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d"
+                "reference": "9570f3c93b570b5601345cc00ce7cda43d5f679a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d",
-                "reference": "0f4c48e2ecd00aff6584dafcce48a2bc5b6b718d",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/9570f3c93b570b5601345cc00ce7cda43d5f679a",
+                "reference": "9570f3c93b570b5601345cc00ce7cda43d5f679a",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +499,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2015-07-15 17:41:05"
+            "time": "2015-07-15 20:23:55"
         }
     ],
     "packages-dev": [

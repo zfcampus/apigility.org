@@ -1,21 +1,23 @@
 <?php
 $this->inlineScript()->appendFile($this->basePath('/js/manual-toc.js'));
+$this->inlineScript()->appendFile($this->basePath('/js/prism-zf.js'));
+$this->headLink()->appendStylesheet($this->basePath('/css/prism-zf.css'));
 ?>
 <section class="manual">
-	<div class="grid" style="margin-top:30px">
-		<div class="unit four-fifths">
-			<article>
-				<div class="post-content">
-                <?php echo $this->manualpage($this->page, $this->model) ?>
-				</div>
-			</article>	
-		</div>
+    <div class="grid" style="margin-top:30px">
+        <div class="unit four-fifths">
+            <article>
+                <div class="post-content">
+                <?php echo $this->markdownpage($this->page, $this->model) ?>
+                </div>
+            </article>    
+        </div>
 
-		<div class="unit one-fifth">
-			<?php echo $this->partial('documentation/toc', array(
-					'model'   => $this->model,
-					'current' => $this->page,
-			)) ?>
-		</div>
-	</div>
+        <div class="unit one-fifth">
+            <?php echo $this->partial('documentation/toc', array(
+                    'model'   => $this->model,
+                    'current' => $this->page,
+            )) ?>
+        </div>
+    </div>
 </section>
