@@ -1,4 +1,7 @@
-<?php // @codingStandardsIgnoreFile ?>
+<?php // @codingStandardsIgnoreFile
+$this->inlineScript()->appendFile($this->basePath('/js/prism-zf.js'));
+$this->headLink()->appendStylesheet($this->basePath('/css/prism-zf.css'));
+ ?>
 <section class="docs">
 	<div class="grid" style="margin-top:30px">
 		<div class="unit four-fifths">
@@ -18,7 +21,7 @@
                         using <strong>PHP 5.4+</strong>:
                     </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -S 0.0.0.0:8888 -t public public/index.php</code></pre></div>
+                    <pre><code class="language-bash">$ php -S 0.0.0.0:8888 -t public public/index.php</code></pre>
 
                     <p>
                         You can start <strong>Apigility</strong> opening your
@@ -50,14 +53,14 @@
                         enabled):
                     </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -sS https://apigility.org/install | php</code></pre></div>
+                    <pre><code class="language-bash">$ curl -sS https://apigility.org/install | php</code></pre>
 
                     <p>
                         If you do not have <a href="http://curl.haxx.se/">curl</a>
                         installed you can use PHP itself:
                     </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -r "readfile('https://apigility.org/install');" | php</code></pre></div>
+                    <pre><code class="language-bash">$ php -r "readfile('https://apigility.org/install');" | php</code></pre>
 
                     <h2>Install a specific version</h2>
                     
@@ -66,7 +69,7 @@
                         For instance, if you want to install the 1.0.0 version you need to add the /1.0.0 at the end of the URL:
                     </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -sS https://apigility.org/install/1.0.0 | php</code></pre></div>
+                    <pre><code class="language-bash">$ curl -sS https://apigility.org/install/1.0.0 | php</code></pre>
 
 					<div class="note info">
 						<h5>If you are using PHP 5.3</h5>
