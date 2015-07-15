@@ -1,3 +1,4 @@
+<?php // @codingStandardsIgnoreFile ?>
 <section class="docs">
 	<div class="grid" style="margin-top:30px">
 		<div class="unit four-fifths">
@@ -58,15 +59,23 @@
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>php -r "readfile('https://apigility.org/install');" | php</code></pre></div>
 
-										<h2>Install a specific version</h2>
-										
-										<p>
-												If you want to install a specific version of Apigility, you can specify the version in the previous URL path.
-												For instance, if you want to install the 1.0.0 version you need to add the /1.0.0 at the end of the URL:
-										</p>
+                    <h2>Install a specific version</h2>
+                    
+                    <p>
+                        If you want to install a specific version of Apigility, you can specify the version in the previous URL path.
+                        For instance, if you want to install the 1.0.0 version you need to add the /1.0.0 at the end of the URL:
+                    </p>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>curl -sS https://apigility.org/install/1.0.0 | php</code></pre></div>
 
+					<div class="note info">
+						<h5>If you are using PHP &lt; 5.3</h5>
+
+                        <p>
+                            If you are using PHP 5.3, the last minor version support that PHP version was 1.2.0; as such, use the
+                            above instructions to install version 1.2.0.
+                        </p>
+					</div>
 				</div>
 			</article>
 		</div>
