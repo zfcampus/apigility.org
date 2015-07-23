@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/28774a4359120d2e02e8b6285ed05670c1bc7053",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/a9dfc97ddc06ca4739630d029bb3d2e16f3efc12",
                 "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },
