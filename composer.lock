@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "8a3c7668b91477e39f6ca99af90edb80",
+    "content-hash": "16a9977b7e0dfbd6fd59fe886e3b1a01",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -16,7 +17,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/a9dfc97ddc06ca4739630d029bb3d2e16f3efc12",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/490a8f35a4163f59230f53c34f1fbb22a864c01e",
                 "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },

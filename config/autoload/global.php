@@ -13,11 +13,11 @@
 
 return array(
 	'apigility' => array(
-		'version' => '1.3.1'
+		'version' => '1.3.3'
 	),
     'links' => array(
-		'zip' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.3.1/zf-apigility-skeleton-1.3.1.zip',
-    	'tgz' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.3.1/zf-apigility-skeleton-1.3.1.tgz',
+		'zip' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.3.3/zf-apigility-skeleton-1.3.3.zip',
+    	'tgz' => 'https://github.com/zfcampus/zf-apigility-skeleton/releases/download/1.3.3/zf-apigility-skeleton-1.3.3.tgz',
     	'forkme' => 'https://github.com/zfcampus'
 	)
 );
