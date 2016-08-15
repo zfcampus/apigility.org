@@ -17,7 +17,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/490a8f35a4163f59230f53c34f1fbb22a864c01e",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/9437766539f6f88e748e7b6183ea31f78e154df5",
                 "reference": "9437766539f6f88e748e7b6183ea31f78e154df5",
                 "shasum": ""
             },
@@ -336,12 +336,12 @@
             "version": "2.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zf2.git",
+                "url": "https://github.com/zendframework/zendframework.git",
                 "reference": "5d22cee82f6f7f9218f47f22a145f3e95c39cacf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/5d22cee82f6f7f9218f47f22a145f3e95c39cacf",
+                "url": "https://api.github.com/repos/zendframework/zendframework/zipball/5d22cee82f6f7f9218f47f22a145f3e95c39cacf",
                 "reference": "5d22cee82f6f7f9218f47f22a145f3e95c39cacf",
                 "shasum": ""
             },
@@ -500,12 +500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "9df54b0ccd82b6fa087db84a1e8d78fba539b046"
+                "reference": "c289088a3c6baaab6240e970647acf238935b823"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/9df54b0ccd82b6fa087db84a1e8d78fba539b046",
-                "reference": "9df54b0ccd82b6fa087db84a1e8d78fba539b046",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/c289088a3c6baaab6240e970647acf238935b823",
+                "reference": "c289088a3c6baaab6240e970647acf238935b823",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +544,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2015-07-15 21:25:20"
+            "time": "2016-08-15 13:28:35"
         }
     ],
     "packages-dev": [
