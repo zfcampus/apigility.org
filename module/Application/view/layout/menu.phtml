@@ -1,9 +1,7 @@
 <ul>
-    <?php
-    foreach ($this->container as $page) :
-    ?>
-        <li class="<?php echo $page->isActive(true) ? 'current' : ''?>">
-            <a href="<?php echo $page->getHref()?>"><?php echo $page->label?></a>
-        </li>
-    <?php endforeach; ?>
+<?php foreach ($this->container as $page) : ?>
+    <li class="<?= $page->isActive(true) ? 'current' : '' ?>">
+        <a href="<?= $page->getHref()?>"><?= $page->label ?></a>
+    </li>
+<?php endforeach ?>
 </ul>

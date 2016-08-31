@@ -18,16 +18,16 @@ class GithubReleases implements Countable, IteratorAggregate
     protected $releases;
 
     /**
-     * @param array $releases 
+     * @param array $releases
      */
-    public function __construct(array $releases = array())
+    public function __construct(array $releases = [])
     {
         $this->releases = $this->parseReleases($releases);
     }
 
     /**
      * Implements Countable
-     * 
+     *
      * @return int
      */
     public function count()
@@ -37,7 +37,7 @@ class GithubReleases implements Countable, IteratorAggregate
 
     /**
      * Implements IteratorAggregate
-     * 
+     *
      * @return ArrayIterator
      */
     public function getIterator()
@@ -47,13 +47,13 @@ class GithubReleases implements Countable, IteratorAggregate
 
     /**
      * Parses releases for information of interest, and sorts by version in desc order
-     * 
-     * @param array $releases 
+     *
+     * @param array $releases
      * @return array
      */
     protected function parseReleases(array $releases)
     {
-        $parsed = array();
+        $parsed = [];
         foreach ($releases as $release) {
             if (! is_object($release)) {
                 continue;
@@ -64,11 +64,13 @@ class GithubReleases implements Countable, IteratorAggregate
                 continue;
             }
 
-            $parsed[] = array(
+            $parsed[] = [
                 'tag'   => $release->tag_name,
                 'url'   => $release->html_url,
-                'notes' => (isset($release->body) && ! empty($release->body)) ? $release->body : 'No changelog available',
-            );
+                'notes' => (isset($release->body) && ! empty($release->body))
+                    ? $release->body
+                    : 'No changelog available',
+            ];
         }
 
         usort($parsed, function ($a, $b) {

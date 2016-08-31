@@ -3,22 +3,22 @@
 
 <?php
 if (isset($this->reason)) {
-    $reasonMessage= '';
+    $reasonMessage = '';
     switch ($this->reason) {
         case 'error-controller-cannot-dispatch':
-            $reasonMessage = $this->translate('The requested controller was unable to dispatch the request.');
+            $reasonMessage = 'The requested controller was unable to dispatch the request.';
             break;
         case 'error-controller-not-found':
-            $reasonMessage = $this->translate('The requested controller could not be mapped to an existing controller class.');
+            $reasonMessage = 'The requested controller could not be mapped to an existing controller class.';
             break;
         case 'error-controller-invalid':
-            $reasonMessage = $this->translate('The requested controller was not dispatchable.');
+            $reasonMessage = 'The requested controller was not dispatchable.';
             break;
         case 'error-router-no-match':
-            $reasonMessage = $this->translate('The requested URL could not be matched by routing.');
+            $reasonMessage = 'The requested URL could not be matched by routing.';
             break;
         default:
-            $reasonMessage = $this->translate('We cannot determine at this time why a 404 was generated.');
+            $reasonMessage = 'We cannot determine at this time why a 404 was generated.';
             break;
     }
 

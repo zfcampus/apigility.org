@@ -35,17 +35,17 @@
         <div class="unit one-third">
             <h2>Download</h2>
 
-            <p>Download Apigility <strong><?php echo $this->version?></strong></p>
+            <p>Download Apigility <strong><?= $this->version ?></strong></p>
 
             <p>
-                <a href="<?php echo $this->url('download') ?>">
+                <a href="<?= $this->url('download') ?>">
                     <img src="img/download.png" alt="Download" title="Download" class="responsive">
                 </a>
             </p>
 
             <p>
                 or install in your terminal without download, as documented below
-                or in the <a href="<?php echo $this->url('documentation')?>/intro/installation">installation
+                or in the <a href="<?= $this->url('documentation') ?>/intro/installation">installation
                 documentation page</a>.
             </p>
         </div>
@@ -65,6 +65,7 @@
         <div class="unit golden-large code">
             <p class="title">Quick-start in your terminal</p>
 
+            <?php // @codingStandardsIgnoreStart ?>
             <div class="shell">
                 <p class="line">
                     <span class="prompt">$</span> <span class="command">curl -sS https://apigility.org/install | php</span>
@@ -82,6 +83,7 @@
                     <span class="output"># open your browser to <a href="http://localhost:8888">http://localhost:8888</a></span>
                 </p>
             </div>
+            <?php // @codingStandardsIgnoreEnd ?>
         </div>
 
         <div class="clear"></div>
@@ -94,7 +96,7 @@
             <p>
                 Want an overview of the Apigility features?
                 <br />
-                Watch this video or <a href="<?php echo $this->url('video')?>">others here</a>
+                Watch this video or <a href="<?= $this->url('video') ?>">others here</a>
             </p>
 
             <div class="media-wrapper">
@@ -108,13 +110,14 @@
             <h2>Apigility key features</h2>
 
             <p>
-                RESTful or RPC services; JSON (specifically, <a href="http://tools.ietf.org/html/draft-kelly-json-hal-08">HAL</a>);
+                RESTful or RPC services; JSON (specifically,
+                <a href="http://tools.ietf.org/html/draft-kelly-json-hal-08">HAL</a>);
                 <a href="https://tools.ietf.org/html/rfc7807">Problem Details for HTTP APIs</a>;
                 Versioning; Normalisation and Validation; Authentication (HTTP Basic/Digest, OAuth2);
                 Documentation (HTML, Swagger, API Blueprint).
             </p>
 
-            <p><a href="<?php echo $this->url('documentation')?>">Discover more</a> ></p>
+            <p><a href="<?= $this->url('documentation') ?>">Discover more</a> &gt;</p>
 
             <br />
 

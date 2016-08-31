@@ -10,10 +10,10 @@ use Zend\View\Resolver;
 chdir(__DIR__ . '/../');
 require_once 'vendor/autoload.php';
 
-$opts = new Getopt(array(
+$opts = new Getopt([
     'help|h'       => 'This usage message',
     'key|k=s'      => 'Set the Youtube API key',
-));
+]);
 
 try {
     $opts->parse();
@@ -32,46 +32,46 @@ if (isset($opts->k)) {
     $client->setDeveloperKey($opts->k);
     $youtubeService = new Google_Service_YouTube($client);
 
-    $playlistItemsResponse = $youtubeService->playlistItems->listPlaylistItems('snippet,status', array(
+    $playlistItemsResponse = $youtubeService->playlistItems->listPlaylistItems('snippet,status', [
         'part' => 'snippet,contentDetails',
         'maxResults' => 50,
         'playlistId' => 'PL8XToL5Ut_4yXlovH3oCmLNNxIT5RNH4w',
-    ));
+    ]);
     // var_dump($playlistItemsResponse['items']);
 
     $videoPath = __DIR__ . '/../module/Application/view/application/video';
-    $videos = array();
+    $videos = [];
 
     foreach ($playlistItemsResponse['items'] as $playlistItem) {
-        $thumbnails = array(
+        $thumbnails = [
             'small' => $playlistItem['snippet']['thumbnails']->getMedium(),
             'large' => $playlistItem['snippet']['thumbnails']->getMaxres(),
-        );
-        $video = array(
+        ];
+        $video = [
             'id' => $playlistItem['snippet']['resourceId']['videoId'],
             'title' => $playlistItem['snippet']['title'],
             'description' => $playlistItem['snippet']['description'],
             'thumbnails' => $thumbnails,
-        );
+        ];
 
         $videos[] = $video;
     }
 
     $renderer = new PhpRenderer();
     $resolver = new Resolver\TemplateMapResolver();
-    $resolver->setMap(array(
+    $resolver->setMap([
         'video/template' => $videoPath . '/template.phtml',
         'video/item' => $videoPath . '/video.phtml',
 
-    ));
+    ]);
     $renderer->setResolver($resolver);
 
     $mainVideo = array_shift($videos);
 
-    $model = new ViewModel(array(
+    $model = new ViewModel([
       'mainVideo' => $mainVideo,
       'videos' => $videos,
-    ));
+    ]);
     $model->setTemplate('video/template');
 
     $html = $renderer->render($model);

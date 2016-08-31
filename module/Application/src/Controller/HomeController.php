@@ -23,10 +23,10 @@ class HomeController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel(array(
+        return new ViewModel([
             'version' => $this->config['apigility']['version'],
             'zip'     => $this->config['links']['zip']
-        ));
+        ]);
     }
 
     public function installAction()

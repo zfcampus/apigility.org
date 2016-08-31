@@ -1,146 +1,146 @@
 <?php
-return array(
-    'router' => array(
-        'routes' => array(
-            'home' => array(
+return [
+    'router' => [
+        'routes' => [
+            'home' => [
                 'type' => 'literal',
-                'options' => array(
+                'options' => [
                     'route'    => '/',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Application\Controller\Home',
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-            'install' => array(
+                    ],
+                ],
+            ],
+            'install' => [
                 'type' => 'segment',
-                'options' => array(
+                'options' => [
                     'route'    => '/install[/:version]',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Application\Controller\Home',
                         'action'     => 'install'
-                    ),
-                    'constraints' => array(
+                    ],
+                    'constraints' => [
                         'version' => '[0-9]+\.[0-9]+\.[0-9]+'
-                    ),
-                ),
-            ),
-            'video' => array(
+                    ],
+                ],
+            ],
+            'video' => [
                 'type' => 'literal',
-                'options' => array(
+                'options' => [
                     'route'    => '/video',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Application\Controller\Video',
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-            'download' => array(
+                    ],
+                ],
+            ],
+            'download' => [
                 'type' => 'literal',
-                'options' => array(
+                'options' => [
                     'route'    => '/download',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Application\Controller\Download',
                         'action'     => 'index',
-                    ),
-                ),
+                    ],
+                ],
                 'may_terminate' => true,
-                'child_routes' => array(
-                    'note' => array(
+                'child_routes' => [
+                    'note' => [
                         'type' => 'literal',
-                        'options' => array(
+                        'options' => [
                             'route' => '/note',
-                            'defaults' => array(
+                            'defaults' => [
                                 'controller' => 'Application\Controller\Download',
                                 'action'     => 'note',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-            'contacts' => array(
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+            'contacts' => [
                 'type' => 'literal',
-                'options' => array(
+                'options' => [
                     'route'    => '/contacts',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Application\Controller\Contacts',
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'navigation' => array(
-         'default' => array(
-             array(
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'navigation' => [
+         'default' => [
+             [
                 'label' => 'Home',
                 'route' => 'home',
-             ),
-             array(
+             ],
+             [
                 'label' => 'Video',
                 'route' => 'video',
-             ),
-             array(
+             ],
+             [
                 'label' => 'Documentation',
                 'route' => 'documentation',
-                'pages' => array(
-                    array(
+                'pages' => [
+                    [
                         'label' => 'Manual',
                         'route' => 'documentation/page',
-                    ),
-                ),
-             ),
-             array(
+                    ],
+                ],
+             ],
+             [
                 'label' => 'Download',
                 'route' => 'download',
-                'pages' => array(
-                    array(
+                'pages' => [
+                    [
                         'label' => 'Release note',
                         'route' => 'download/note',
-                    ),
-                ),
-             ),
-             array(
+                    ],
+                ],
+             ],
+             [
                 'label' => 'Contacts',
                 'route' => 'contacts',
-             ),
-         ),
-     ),
-    'service_manager' => array(
-        'aliases' => array(
+             ],
+         ],
+     ],
+    'service_manager' => [
+        'aliases' => [
             'translator' => 'MvcTranslator',
-        ),
-        'factories' => array(
+        ],
+        'factories' => [
             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-        ),
-    ),
-    'controllers' => array(
-        'invokables' => array(
+        ],
+    ],
+    'controllers' => [
+        'invokables' => [
             'Application\Controller\Video' => 'Application\Controller\VideoController',
             'Application\Controller\Contacts' => 'Application\Controller\ContactsController',
-        ),
-    ),
-    'view_manager' => array(
+        ],
+    ],
+    'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
-        'template_map' => array(
+        'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
-        ),
-        'template_path_stack' => array(
+        ],
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-    ),
+        ],
+    ],
     // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(
-            ),
-        ),
-    ),
-);
+    'console' => [
+        'router' => [
+            'routes' => [
+            ],
+        ],
+    ],
+];

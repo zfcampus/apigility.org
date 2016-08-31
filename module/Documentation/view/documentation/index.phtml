@@ -44,10 +44,10 @@
 		</div>
 
 		<div class="unit one-fifth">
-			<?php echo $this->partial('documentation/toc', array(
-					'model'   => $this->model,
-					'current' => $this->page,
-			)) ?>
-		</div>
-	</div>
+			<?= $this->partial('documentation/toc', [
+                'model'   => $this->model,
+                'current' => $this->page,
+            ]) ?>
+        </div>
+    </div>
 </section>

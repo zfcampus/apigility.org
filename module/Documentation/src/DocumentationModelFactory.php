@@ -10,7 +10,7 @@ class DocumentationModelFactory
 {
     public function __invoke($services)
     {
-        $config = array();
+        $config = [];
         if ($services->has('config')) {
             $config = $this->getConfigViaService($config, $services->get('config'));
         }

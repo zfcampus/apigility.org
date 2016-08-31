@@ -33,31 +33,31 @@ class DownloadController extends AbstractActionController
 
     protected function getAside()
     {
-        $aside = array(
-            '' => array(
+        $aside = [
+            '' => [
                 'Download' => $this->url()->fromRoute('download'),
                 'Changelog' => $this->url()->fromRoute('download/note')
-            ),
-            'Previous Releases' => array(),
-        );
+            ],
+            'Previous Releases' => [],
+        ];
         foreach ($this->releases as $release) {
             $aside['Previous Releases'][$release['tag']] = $release['url'];
         }
         $aside['Previous Releases']['All the releases'] = 'https://github.com/zfcampus/zf-apigility-skeleton/releases';
         return $aside;
     }
-    
+
     public function indexAction()
     {
-        return new ViewModel(array(
+        return new ViewModel([
             'aside'   => $this->getAside(),
             'current' => $this->url()->fromRoute('download'),
             'version' => $this->config['apigility']['version'],
             'tgz'     => $this->config['links']['tgz'],
             'zip'     => $this->config['links']['zip']
-        ));
+        ]);
     }
-    
+
     public function noteAction()
     {
         $version   = $this->config['apigility']['version'];
@@ -69,12 +69,12 @@ class DownloadController extends AbstractActionController
                 break;
             }
         }
-         
-        return new ViewModel(array(
+
+        return new ViewModel([
             'aside'     => $this->getAside(),
             'current'   => $this->url()->fromRoute('download/note'),
             'version'   => $version,
             'changelog' => $changelog,
-        ));
+        ]);
     }
 }

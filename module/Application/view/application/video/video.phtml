@@ -1,18 +1,22 @@
 <div class="grid chapter">
     <div class="unit one-third">
         <div class="thumb">
-            <a class="vidLink" href="http://www.youtube.com/watch?v=<?php echo $this->id; ?>" data-poster="<?php echo $this->thumbnails['small']['url']; ?>">
+            <a class="vidLink"
+                href="http://www.youtube.com/watch?v=<?= $this->id; ?>"
+                data-poster="<?= $this->thumbnails['small']['url']; ?>">
                 <span class="play">&#9658;</span>
                 <div class="overlay"></div>
             </a>
-            <img src="<?php echo $this->thumbnails['small']['url']; ?>" width="100%">
+            <img src="<?= $this->thumbnails['small']['url']; ?>" width="100%">
         </div>
     </div>
     <div class="unit two-thirds">
-        <a class="vidLink" href="http://www.youtube.com/watch?v=<?php echo $this->id; ?>" data-poster="<?php echo $this->thumbnails['large']['url']; ?>">
-            <h2><?php echo $this->title; ?></h2>
+        <a class="vidLink"
+            href="http://www.youtube.com/watch?v=<?= $this->id; ?>"
+            data-poster="<?= $this->thumbnails['large']['url']; ?>">
+            <h2><?= $this->title; ?></h2>
         </a>
-        <p><?php echo $this->description; ?></p>
+        <p><?= $this->description; ?></p>
     </div>
 </div>
 <br clear="left">

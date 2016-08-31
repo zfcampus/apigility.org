@@ -15,7 +15,7 @@ use Zend\View\Model\ViewModel;
 class ContactsController extends AbstractActionController
 {
     public function indexAction()
-    {   	
+    {
         return new ViewModel();
     }
 }

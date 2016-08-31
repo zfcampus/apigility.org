@@ -18,27 +18,27 @@ if (file_exists($apigilityDir)) {
     die("Error: The apigility directory already exists\n");
 }
 
-if (!file_exists($tmpFile)) {
-	echo "Download Apigility\n";
-	$fr = fopen($releaseUrl, 'r');
-	$fw = fopen($tmpFile, 'w');
-	while (!feof($fr)) {
-	    fwrite($fw, fread($fr, 1048576)); // 1 MB buffer
-	    echo '.';
-	}
-	fclose($fw);
-	fclose($fr);
-} else  {
-	echo "Get Apigility from cache [$tmpFile]";
+if (! file_exists($tmpFile)) {
+    echo "Download Apigility\n";
+    $fr = fopen($releaseUrl, 'r');
+    $fw = fopen($tmpFile, 'w');
+    while (! feof($fr)) {
+        fwrite($fw, fread($fr, 1048576)); // 1 MB buffer
+        echo '.';
+    }
+    fclose($fw);
+    fclose($fr);
+} else {
+    echo "Get Apigility from cache [$tmpFile]";
 }
 
 echo "\nInstall Apigility\n";
 
 $zip = new ZipArchive;
-if (!$zip->open($tmpFile)) {
+if (! $zip->open($tmpFile)) {
     die("Error: opening file $tmpFile\n");
 }
-if (!$zip->extractTo($localPath)) {
+if (! $zip->extractTo($localPath)) {
     die("Error: extract $tmpFile\n");
 }
 
@@ -68,7 +68,7 @@ if (version_compare(PHP_VERSION, '5.4.0') >= 0) {
  */
 function checkPlatform()
 {
-    if (!class_exists('ZipArchive')) {
+    if (! class_exists('ZipArchive')) {
         die("Error: I cannot install Apigility without the Zip extension of PHP\n");
     }
 }
