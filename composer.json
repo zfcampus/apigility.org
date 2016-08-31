@@ -24,7 +24,8 @@
     },
     "require-dev": {
         "zendframework/zend-console": "^2.6",
-        "google/apiclient": "^2.0"
+        "google/apiclient": "^2.0",
+        "squizlabs/php_codesniffer": "^2.6"
     },
     "autoload": {
         "psr-4": {
@@ -36,6 +37,8 @@
         "build": [
             "composer update zfcampus/apigility-documentation",
             "php ./bin/get-releases.php"
-        ]
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf"
     }
 }

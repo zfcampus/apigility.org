@@ -10,9 +10,9 @@ $this->headLink()->appendStylesheet($this->basePath('/css/prism-zf.css'));
 					<h1>Download</h1>
 
                     <p>
-                        Download the <strong><?php echo $this->version ?></strong> version of <strong>Apigility</strong>:<br /><br />
-						<a href="<?php echo $this->zip ?>"><img src="img/download_zip.png" alt="Zip" title="Zip" class="download responsive"></a>
-						<a href="<?php echo $this->tgz ?>"><img src="img/download_tgz.png" alt="Tgz" title="Tgz" class="download responsive"></a>
+                        Download the <strong><?= $this->version ?></strong> version of <strong>Apigility</strong>:<br /><br />
+						<a href="<?= $this->zip ?>"><img src="img/download_zip.png" alt="Zip" title="Zip" class="download responsive"></a>
+						<a href="<?= $this->tgz ?>"><img src="img/download_tgz.png" alt="Tgz" title="Tgz" class="download responsive"></a>
 					</p>
 
                     <p>
@@ -66,10 +66,10 @@ $this->headLink()->appendStylesheet($this->basePath('/css/prism-zf.css'));
 		</div>
 
 		<div class="unit one-fifth hide-on-mobiles">
-			<?php echo $this->partial('layout/aside', array(
-					'aside'   => $this->aside,
-					'current' => $this->current
-			)) ?>
+			<?= $this->partial('layout/aside', [
+                'aside'   => $this->aside,
+                'current' => $this->current,
+			]) ?>
 		</div>
 
 		<div class="clear"></div>

@@ -1,21 +1,21 @@
-<?php $parser = new \League\CommonMark\CommonMarkConverter(); ?>
+<?php $parser = new \League\CommonMark\CommonMarkConverter() ?>
 <section class="docs">
     <div class="grid" style="margin-top:30px">
         <div class="unit four-fifths">
             <article>
                 <div class="post-content">
-                    <h1><?php echo $this->version ?> Changelog</h1>
+                    <h1><?= $this->version ?> Changelog</h1>
 
-                    <?php echo $parser->convertToHtml($this->changelog) ?>
+                    <?= $parser->convertToHtml($this->changelog) ?>
                 </div>
             </article>
         </div>
 
         <div class="unit one-fifth hide-on-mobiles">
-            <?php echo $this->partial('layout/aside', array(
-                    'aside'   => $this->aside,
-                    'current' => $this->current
-            )) ?>
+            <?= $this->partial('layout/aside', [
+                'aside'   => $this->aside,
+                'current' => $this->current,
+            ]) ?>
         </div>
 
         <div class="clear"></div>

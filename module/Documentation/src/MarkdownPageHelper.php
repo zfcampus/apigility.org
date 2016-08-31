@@ -58,22 +58,22 @@ class MarkdownPageHelper implements HelperInterface
         $html = str_replace('language-HTTP', 'language-http', $html);
 
         // transform language-JSON, language-json, and language-js to language-javascript
-        $html = str_replace(array('language-JSON', 'language-json', 'language-js'), 'language-javascript', $html);
+        $html = str_replace(['language-JSON', 'language-json', 'language-js'], 'language-javascript', $html);
 
         // transform language-console, language-sh to language-bash
-        $html = str_replace(array('language-console', 'language-sh'), 'language-bash', $html);
+        $html = str_replace(['language-console', 'language-sh'], 'language-bash', $html);
 
         // transform links
         $html = preg_replace_callback(
             '#(?P<attr>src|href)="/(?P<link>[^"]+)"#s',
-            array($this, 'rewriteLinks'),
+            [$this, 'rewriteLinks'],
             $html
         );
 
         // add anchors to headers
         $html = preg_replace_callback(
             '#<(?P<header>h[1-4])>(?P<content>.*?)</\1>#s',
-            array($this, 'addAnchorsToHeaders'),
+            [$this, 'addAnchorsToHeaders'],
             $html
         );
 
@@ -94,7 +94,7 @@ class MarkdownPageHelper implements HelperInterface
             $link = $this->url->__invoke('documentation') . $link;
         }
 
-        if (isset($matches['anchor']) && !empty($matches['anchor'])) {
+        if (isset($matches['anchor']) && ! empty($matches['anchor'])) {
             $link .= $matches['anchor'];
         }
 
@@ -125,7 +125,7 @@ class MarkdownPageHelper implements HelperInterface
 
         $chain = new FilterChain();
         $chain->attachByName('StripTags');
-        $chain->attachByName('PregReplace', array('pattern' => '/[^a-z0-9_ -]/i', 'replacement' => ''));
+        $chain->attachByName('PregReplace', ['pattern' => '/[^a-z0-9_ -]/i', 'replacement' => '']);
         $chain->attachByName('WordSeparatorToDash'); // Uses " " as separator by default
         $chain->attachByName('StringToLower');
 

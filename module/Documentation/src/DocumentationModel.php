@@ -14,7 +14,7 @@ class DocumentationModel
     protected $config;
 
     /**
-     * @param array $config 
+     * @param array $config
      */
     public function __construct(array $config)
     {
@@ -22,7 +22,7 @@ class DocumentationModel
     }
 
     /**
-     * @param sting $page 
+     * @param sting $page
      * @return bool
      */
     public function hasPage($page)
@@ -38,7 +38,7 @@ class DocumentationModel
     }
 
     /**
-     * @param string $page 
+     * @param string $page
      * @return string
      */
     public function getPageContents($page)
@@ -52,7 +52,7 @@ class DocumentationModel
     }
 
     /**
-     * @param string $page 
+     * @param string $page
      * @return string
      */
     protected function getPagePath($page)

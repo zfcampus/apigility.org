@@ -23,9 +23,9 @@ class DocumentationController extends AbstractActionController
 
     public function indexAction()
     {
-        $view = new ViewModel(array(
+        $view = new ViewModel([
             'model' => $this->model,
-        ));
+        ]);
         $view->setTemplate('documentation/index');
         return $view;
     }
@@ -41,10 +41,10 @@ class DocumentationController extends AbstractActionController
             return $view;
         }
 
-        $view = new ViewModel(array(
+        $view = new ViewModel([
             'model' => $this->model,
             'page'  => $page,
-        ));
+        ]);
         $view->setTemplate('documentation/page');
         return $view;
     }

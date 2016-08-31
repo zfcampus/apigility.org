@@ -1,9 +1,9 @@
 <aside class="toc">
 <?php
-    $toc     = $this->markdownpage('TOC', $this->model, false);
-    $baseUri = $this->url('documentation', array(), false);
-    $current = sprintf('%s/%s', $baseUri, $this->current);
-    echo $toc;
+$toc     = $this->markdownpage('TOC', $this->model, false);
+$baseUri = $this->url('documentation', [], false);
+$current = sprintf('%s/%s', $baseUri, $this->current);
+echo $toc;
 ?>
 </aside>
 

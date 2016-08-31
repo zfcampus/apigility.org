@@ -1,23 +1,23 @@
-<?php echo $this->doctype(); ?>
+<?= $this->doctype(); ?>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<?php echo $this->headTitle('Apigility')->setSeparator(' - ')->setAutoEscape(false) ?>
-	<?php echo $this->headMeta()
+    <meta charset="UTF-8">
+    <?= $this->headTitle('Apigility')->setSeparator(' - ')->setAutoEscape(false) ?>
+    <?= $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge') ?>
 
-    <?php echo $this
-            ->headLink(array(
+    <?= $this
+            ->headLink([
                 'rel' => 'shortcut icon',
                 'type' => 'image/vnd.microsoft.icon',
                 'href' => $this->basePath() . '/img/favicon.ico'
-            ))
+            ])
             ->appendStylesheet($this->basePath() . '/bower_components/mediaelement/build/mediaelementplayer.min.css')
             ->appendStylesheet($this->basePath() . '/css/font.css')
             ->appendStylesheet($this->basePath() . '/css/screen.css') ?>
 
-    <?php echo $this->headScript()
+    <?= $this->headScript()
         ->prependFile($this->basePath('/js/video.js'))
         ->prependFile($this->basePath('/bower_components/mediaelement/build/mediaelement-and-player.min.js'))
         ->prependFile($this->basePath('/bower_components/zepto/zepto.min.js'))
@@ -26,50 +26,55 @@
 ?>
 </head>
 <body class="wrap">
-	<a href="<?php echo $this->layout()->forkme ?>"><img
-		class="github-ribbon"
-		src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
-		alt="Fork me on GitHub"
-		data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+<?php // @codingStandardsIgnoreStart ?>
+    <a href="<?= $this->layout()->forkme ?>"><img
+        class="github-ribbon"
+        src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+<?php // @codingStandardsIgnoreEnd ?>
 
-	<header>
-		<nav class="mobile-nav show-on-mobiles">
-			<?php echo $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
-		</nav>
+    <header>
+        <nav class="mobile-nav show-on-mobiles">
+            <?= $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
+        </nav>
 
-		<div class="grid">
-			<div class="brand unit one-third center-on-mobiles">
-				<h1>
-					<a href="<?php echo $this->url('home') ?>"> <span>Apigility</span> <img src="<?php echo $this->basePath('/img/ag-hero.png') ?>" alt="Apigility" class="responsive"></a>
-				</h1>
-			</div>
+        <div class="grid">
+            <div class="brand unit one-third center-on-mobiles">
+                <h1>
+                    <a href="<?= $this->url('home') ?>"> 
+                    <span>Apigility</span> 
+                    <img src="<?= $this->basePath('/img/ag-hero.png') ?>" alt="Apigility" class="responsive"></a>
+                </h1>
+            </div>
 
-			<nav class="main-nav unit two-thirds hide-on-mobiles">
-				<?php echo $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
-			</nav>
-		</div>
-	</header>
+            <nav class="main-nav unit two-thirds hide-on-mobiles">
+                <?= $this->navigation('navigation')->menu()->setPartial('layout/menu') ?>
+            </nav>
+        </div>
+    </header>
 
-	<?php echo $this->content ?>
+    <?= $this->content ?>
 
-	<footer>
-		<div class="grid">
-			<div class="unit one-third center-on-mobiles">
-				<p>
-					&copy; 2013 &mdash; 2015 by <a href="http://www.zend.com">Zend Technologies,
-					Ltd</a>. All rights reserved.
-				</p>
-			</div>
+    <footer>
+        <div class="grid">
+            <div class="unit one-third center-on-mobiles">
+                <p>
+                    &copy; 2013 &mdash; 2015 by <a href="http://www.zend.com">Zend Technologies,
+                    Ltd</a>. All rights reserved.
+                </p>
+            </div>
 
-			<div class="unit two-thirds align-right center-on-mobiles">
-				<p>
-					Proudly built with <a href="http://framework.zend.com"><img	src="<?php echo $this->basePath() ?>/img/zf.png"></a>
-				</p>
-			</div>
-		</div>
-	</footer>
+            <div class="unit two-thirds align-right center-on-mobiles">
+                <p>
+                    Proudly built with
+                     <a href="http://framework.zend.com"><img src="<?= $this->basePath('/img/zf.png') ?>"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-    <?php echo $this->inlineScript() ?>
+    <?= $this->inlineScript() ?>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

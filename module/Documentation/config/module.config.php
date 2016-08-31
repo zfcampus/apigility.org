@@ -4,52 +4,52 @@
  * @copyright Copyright (c) 2014 Zend Technologies USA Inc. (http://www.zend.com)
  */
 
-return array(
-    'controllers' => array(
-        'factories' => array(
+return [
+    'controllers' => [
+        'factories' => [
             'Documentation\Controller' => 'Documentation\DocumentationControllerFactory',
-        ),
-    ),
-    'router' => array('routes' => array(
-        'documentation' => array(
+        ],
+    ],
+    'router' => ['routes' => [
+        'documentation' => [
             'type' => 'Literal',
-            'options' => array(
+            'options' => [
                 'route' => '/documentation',
-                'defaults' => array(
+                'defaults' => [
                     'controller' => 'Documentation\Controller',
                     'action'     => 'index',
-                ),
-            ),
+                ],
+            ],
             'may_terminate' => true,
-            'child_routes' => array(
-                'page' => array(
+            'child_routes' => [
+                'page' => [
                     'type' => 'Segment',
-                    'options' => array(
+                    'options' => [
                         'route' => '/:page',
-                        'defaults' => array(
+                        'defaults' => [
                             'action' => 'page',
-                        ),
-                        'constraints' => array(
+                        ],
+                        'constraints' => [
                             'page' => '[a-zA-Z0-9][a-zA-Z0-9_./-]*',
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    )),
-    'service_manager' => array(
-        'factories' => array(
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ]],
+    'service_manager' => [
+        'factories' => [
             'Documentation\Model' => 'Documentation\DocumentationModelFactory',
-        ),
-    ),
-    'view_helpers' => array(
-        'factories' => array(
+        ],
+    ],
+    'view_helpers' => [
+        'factories' => [
             'markdownpage' => 'Documentation\MarkdownPageHelperFactory',
-        ),
-    ),
-    'view_manager' => array(
-        'template_path_stack' => array(
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+];
