@@ -3,7 +3,7 @@ return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'literal',
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
@@ -13,7 +13,7 @@ return array(
                 ),
             ),
             'install' => array(
-                'type' => 'Zend\Mvc\Router\Http\Segment',
+                'type' => 'segment',
                 'options' => array(
                     'route'    => '/install[/:version]',
                     'defaults' => array(
@@ -26,7 +26,7 @@ return array(
                 ),
             ),
             'video' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'literal',
                 'options' => array(
                     'route'    => '/video',
                     'defaults' => array(
@@ -36,7 +36,7 @@ return array(
                 ),
             ),
             'download' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'literal',
                 'options' => array(
                     'route'    => '/download',
                     'defaults' => array(
@@ -47,7 +47,7 @@ return array(
                 'may_terminate' => true,
                 'child_routes' => array(
                     'note' => array(
-                        'type' => 'Zend\Mvc\Router\Http\Literal',
+                        'type' => 'literal',
                         'options' => array(
                             'route' => '/note',
                             'defaults' => array(
@@ -59,7 +59,7 @@ return array(
                 ),
             ),
             'contacts' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'literal',
                 'options' => array(
                     'route'    => '/contacts',
                     'defaults' => array(
@@ -107,10 +107,6 @@ return array(
          ),
      ),
     'service_manager' => array(
-        'abstract_factories' => array(
-            'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-            'Zend\Log\LoggerAbstractServiceFactory',
-        ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
@@ -118,19 +114,8 @@ return array(
             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
-    'translator' => array(
-        'locale' => 'en_US',
-        'translation_file_patterns' => array(
-            array(
-                'type'     => 'gettext',
-                'base_dir' => __DIR__ . '/../language',
-                'pattern'  => '%s.mo',
-            ),
-        ),
-    ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Home' => 'Application\Controller\HomeController',
             'Application\Controller\Video' => 'Application\Controller\VideoController',
             'Application\Controller\Contacts' => 'Application\Controller\ContactsController',
         ),

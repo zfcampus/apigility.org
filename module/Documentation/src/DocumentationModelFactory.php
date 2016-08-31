@@ -11,8 +11,8 @@ class DocumentationModelFactory
     public function __invoke($services)
     {
         $config = array();
-        if ($services->has('Config')) {
-            $config = $this->getConfigViaService($config, $services->get('Config'));
+        if ($services->has('config')) {
+            $config = $this->getConfigViaService($config, $services->get('config'));
         }
 
         return new DocumentationModel($config);
