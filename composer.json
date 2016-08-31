@@ -24,5 +24,11 @@
     "require-dev": {
         "zfcampus/zf-console": "~1.0",
         "zfcampus/zf-deploy": "~1.0"
+    },
+    "scripts": {
+        "build": [
+            "composer update zfcampus/apigility-documentation",
+            "php ./bin/get-releases.php"
+        ]
     }
 }
