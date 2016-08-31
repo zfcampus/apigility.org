@@ -126,7 +126,7 @@ class MarkdownPageHelper implements HelperInterface
         $chain = new FilterChain();
         $chain->attachByName('StripTags');
         $chain->attachByName('PregReplace', array('pattern' => '/[^a-z0-9_ -]/i', 'replacement' => ''));
-        $chain->attachByName('Word\SeparatorToDash'); // Uses " " as separator by default
+        $chain->attachByName('WordSeparatorToDash'); // Uses " " as separator by default
         $chain->attachByName('StringToLower');
 
         $this->anchorFilterChain = $chain;

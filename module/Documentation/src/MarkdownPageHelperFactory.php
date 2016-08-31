@@ -6,10 +6,15 @@
 
 namespace Documentation;
 
+use Zend\ServiceManager\AbstractPluginManager;
+
 class MarkdownPageHelperFactory
 {
     public function __invoke($helpers)
     {
+        if (! $helpers instanceof AbstractPluginManager) {
+            $helpers = $helpers->get('ViewHelperManager');
+        }
         return new MarkdownPageHelper($helpers->get('url'));
     }
 }

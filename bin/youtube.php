@@ -28,16 +28,16 @@ if (isset($opts->h)) {
 }
 
 if (isset($opts->k)) {
-    $client = new \Google_Client();
+    $client = new Google_Client();
     $client->setDeveloperKey($opts->k);
-    $youtubeService = new \Google_Service_YouTube($client);
+    $youtubeService = new Google_Service_YouTube($client);
 
     $playlistItemsResponse = $youtubeService->playlistItems->listPlaylistItems('snippet,status', array(
         'part' => 'snippet,contentDetails',
         'maxResults' => 50,
         'playlistId' => 'PL8XToL5Ut_4yXlovH3oCmLNNxIT5RNH4w',
     ));
-    //var_dump($playlistItemsResponse['items']);
+    // var_dump($playlistItemsResponse['items']);
 
     $videoPath = __DIR__ . '/../module/Application/view/application/video';
     $videos = array();

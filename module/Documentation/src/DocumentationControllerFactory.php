@@ -6,11 +6,15 @@
 
 namespace Documentation;
 
+use Zend\ServiceManager\AbstractPluginManager;
+
 class DocumentationControllerFactory
 {
-    public function __invoke($controllers)
+    public function __invoke($services)
     {
-        $services = $controllers->getServiceLocator();
+        if ($services instanceof AbstractPluginManager) {
+            $services = $services->getServiceLocator() ?: $services;
+        }
         return new DocumentationController($services->get('Documentation\Model'));
     }
 }

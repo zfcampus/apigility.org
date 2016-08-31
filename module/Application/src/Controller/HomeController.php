@@ -14,13 +14,18 @@ use Zend\View\Model\ViewModel;
 
 class HomeController extends AbstractActionController
 {
+    private $config;
+
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+    }
+
     public function indexAction()
     {
-        $config = $this->getServiceLocator()->get('Config');
-
         return new ViewModel(array(
-            'version'  => $config['apigility']['version'],
-            'zip' => $config['links']['zip']
+            'version' => $this->config['apigility']['version'],
+            'zip'     => $this->config['links']['zip']
         ));
     }
 
@@ -28,9 +33,9 @@ class HomeController extends AbstractActionController
     {
         $version = $this->params()->fromRoute('version');
         if (empty($version)) {
-            $installer = file_get_contents(__DIR__ . '/../../../../../bin/install.php');
+            $installer = file_get_contents(__DIR__ . '/../../../../bin/install.php');
         } else {
-            $installer = file_get_contents(__DIR__ . '/../../../../../bin/install.php.dist');
+            $installer = file_get_contents(__DIR__ . '/../../../../bin/install.php.dist');
             $installer = str_replace('%VERSION%', $version, $installer);
         }
 
