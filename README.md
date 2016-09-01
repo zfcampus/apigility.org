@@ -1,7 +1,7 @@
 Apigility.org web site
 ======================
 
-(C) Copyright 2013-2014 Zend Technologies Ltd.
+(C) Copyright 2013-2016 Zend Technologies Ltd.
 
 Creating a new release
 ----------------------
@@ -9,14 +9,21 @@ Creating a new release
 Use the `Makefile`:
 
 ```console
-$ make all VERSION=<version string>
+$ make all AG_VERSION=<Apigility release version>
 ```
 
-This will update:
+This will update the installer for the new release version.
+
+To see the changes reflected in your development version, you may also run:
+
+```console
+$ composer build
+```
+
+which will update:
 
 - `config/autoload/global.php`
 - `data/releases.json`
-- `composer.phar` (if out-of-date)
 - `composer.lock` (if the documentation was updated)
 
 Spot-check those, commit, and push.
