@@ -1207,16 +1207,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "a80e68af7096c2565749f14d5b5388cbd79bd8d7"
+                "reference": "e35be2a12af6203ed44621bad21f962027bc920f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/a80e68af7096c2565749f14d5b5388cbd79bd8d7",
-                "reference": "a80e68af7096c2565749f14d5b5388cbd79bd8d7",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/e35be2a12af6203ed44621bad21f962027bc920f",
+                "reference": "e35be2a12af6203ed44621bad21f962027bc920f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.23"
+                "php": "^5.6 || ^7.0"
             },
             "suggest": {
                 "erusev/parsedown": ">=0.9.4 for rendering GitHub-flavored Markdown in PHP",
@@ -1251,7 +1251,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2016-09-30 16:14:28"
+            "time": "2016-10-12 15:23:27"
         }
     ],
     "packages-dev": [
