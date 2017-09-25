@@ -49,8 +49,8 @@
             "composer update zfcampus/apigility-documentation",
             "php ./bin/get-releases.php",
             "cd asset && npm install --no-save && gulp",
-            "rm data/cache/module-classmap-cache.php",
-            "rm data/cache/module-config-cache.php"
+            "rm -f data/cache/module-classmap-cache.php",
+            "rm -f data/cache/module-config-cache.php"
         ],
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
