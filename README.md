@@ -1,10 +1,8 @@
-Apigility.org web site
-======================
+# Apigility.org web site
 
 (C) Copyright 2013-2017 Zend Technologies Ltd.
 
-Creating a new release
-----------------------
+## Creating a new release
 
 Use the `Makefile`:
 
@@ -47,8 +45,7 @@ our assets. The file is used by the [`asset()` view helper](https://docs.zendfra
 
 The above commands are run automatically when you execute `composer build`.
 
-Documentation
--------------
+## Documentation
 
 Documentation is written in a separate repository,
 [apigility-documentation](https://github.com/zfcampus/apigility-documentation),
@@ -83,8 +80,7 @@ anything. If it is on any other path, add the following to your
 'pygmentize' => 'path/to/pygmentize'
 ```
 
-Deployment
-----------
+## Deployment
 
 The easiest way to deploy is to use the following:
 
