@@ -1,3 +1,8 @@
+asset/node_modules/
+asset/npm-debug.log
+asset/rev-manifest.json
+public/css/*
+public/js/*
 vendor
 nbproject
 ._*

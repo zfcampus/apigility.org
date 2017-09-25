@@ -7,8 +7,6 @@ echo $toc;
 ?>
 </aside>
 
-<script>
-Zepto(function($) {
-    $('a[href="<?= $current; ?>"]').parent('li').addClass('current').parents('ul').show();
-});
-</script>
+<?php $this->inlineScript()->captureStart(); ?>
+$('a[href="<?= $current; ?>"]').parent('li').addClass('current').parents('ul').show();
+<?php $this->inlineScript()->captureEnd(); ?>

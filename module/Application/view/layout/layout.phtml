@@ -13,17 +13,13 @@
                 'type' => 'image/vnd.microsoft.icon',
                 'href' => $this->basePath() . '/img/favicon.ico'
             ])
-            ->appendStylesheet($this->basePath() . '/bower_components/mediaelement/build/mediaelementplayer.min.css')
-            ->appendStylesheet($this->basePath() . '/css/font.css')
-            ->appendStylesheet($this->basePath() . '/css/screen.css') ?>
+            ->appendStylesheet($this->basePath() . '/' . $this->asset('css/styles.css')) ?>
 
-    <?= $this->headScript()
-        ->prependFile($this->basePath('/js/video.js'))
-        ->prependFile($this->basePath('/bower_components/mediaelement/build/mediaelement-and-player.min.js'))
-        ->prependFile($this->basePath('/bower_components/zepto/zepto.min.js'))
-        ->prependFile($this->basePath('/bower_components/modernizr/modernizr.js'))
-        ->prependFile($this->basePath('/bower_components/jquery/dist/jquery.min.js'));
-?>
+    <?php
+        $this->inlineScript()
+            ->prependFile($this->basePath('/') . $this->asset('js/scripts.js'))
+            ->prependFile('https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js');
+    ?>
 </head>
 <body class="wrap">
 <?php // @codingStandardsIgnoreStart ?>

@@ -36,7 +36,8 @@
     "scripts": {
         "build": [
             "composer update zfcampus/apigility-documentation",
-            "php ./bin/get-releases.php"
+            "php ./bin/get-releases.php",
+            "cd asset && npm install --no-save && gulp"
         ],
         "cs-check": "phpcs",
         "cs-fix": "phpcbf"
