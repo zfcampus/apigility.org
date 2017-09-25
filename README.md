@@ -28,31 +28,6 @@ which will update:
 
 Spot-check those, commit, and push.
 
-Updating 3rd Party UI Dependencies
-----------------------------------
-
-We use [Bower](http://bower.io) for managing 3rd party UI dependencies. If you
-need to update or add dependencies, make sure you have installed Bower first.
-
-To add a dependency:
-
-```console
-$ bower install <name> -S
-```
-
-Once installed and integrated, add the new directory under
-`public/bower_components` and the `bower.json` file, and commit.
-
-To update dependencies:
-
-```console
-$ bower update <name>
-```
-
-As with installing dependencies, after testing the updated version, add the
-updated directory under `public/bower_components` and the `bower.json` file, and
-commit.
-
 Documentation
 -------------
 
