@@ -1,7 +1,7 @@
 Apigility.org web site
 ======================
 
-(C) Copyright 2013-2016 Zend Technologies Ltd.
+(C) Copyright 2013-2017 Zend Technologies Ltd.
 
 Creating a new release
 ----------------------
