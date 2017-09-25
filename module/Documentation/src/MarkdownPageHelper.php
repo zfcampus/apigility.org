@@ -48,11 +48,11 @@ class MarkdownPageHelper implements HelperInterface
     /**
      * Invoke as a function
      *
-     * @param string $string
+     * @param string $page
      * @param DocumentationModel $model
      * @param bool $highlightContents
      * @return string
-     * @throws RuntimeException for non-string input
+     * @throws \RuntimeException for non-string input
      */
     public function __invoke($page, DocumentationModel $model, $highlightContents = true)
     {
