@@ -6,7 +6,11 @@
 
 namespace Documentation;
 
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Converter;
+use League\CommonMark\DocParser;
+use League\CommonMark\Environment;
+use League\CommonMark\HtmlRenderer;
+use Webuni\CommonMark\TableExtension\TableExtension;
 use Zend\Filter\FilterChain;
 use Zend\View\Helper\HelperInterface;
 use Zend\View\Helper\Url as UrlHelper;
@@ -20,7 +24,7 @@ class MarkdownPageHelper implements HelperInterface
     protected $anchorFilterChain;
 
     /**
-     * @var CommonMarkConverter
+     * @var Converter
      */
     protected $parser;
 
@@ -34,7 +38,10 @@ class MarkdownPageHelper implements HelperInterface
      */
     public function __construct(UrlHelper $url)
     {
-        $this->parser = new CommonMarkConverter;
+        $environment = Environment::createCommonMarkEnvironment();
+        $environment->addExtension(new TableExtension());
+
+        $this->parser = new Converter(new DocParser($environment), new HtmlRenderer($environment));
         $this->url    = $url;
     }
 
