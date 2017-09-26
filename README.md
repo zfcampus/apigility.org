@@ -2,6 +2,26 @@
 
 (C) Copyright 2013-2017 Zend Technologies Ltd.
 
+## Docker
+
+For development, we use [docker-compose](https://docs.docker.com/compose/);
+make sure you have both that and Docker installed on your machine.
+
+Build the images:
+
+```console
+$ docker-compose build
+```
+
+And then launch them:
+
+```console
+$ docker-compose up -d
+```
+
+You can then browse to `http://localhost:8080`, and any changes you make in the
+project will be reflected immediately.
+
 ## Creating a new release
 
 Use the `Makefile`:
