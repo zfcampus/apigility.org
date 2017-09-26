@@ -240,6 +240,14 @@ body>footer a:hover img {
 	opacity: 1;
 }
 
+body>footer .btn-social {
+	font-size: larger;
+	margin-right: 12px;
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
 @media ( max-width : 568px) {
 	footer .half p {
 		margin-bottom: 0;

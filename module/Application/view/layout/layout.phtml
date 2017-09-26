@@ -13,7 +13,9 @@
                 'type' => 'image/vnd.microsoft.icon',
                 'href' => $this->basePath() . '/img/favicon.ico'
             ])
-            ->appendStylesheet($this->basePath() . '/' . $this->asset('css/styles.css')) ?>
+            ->appendStylesheet($this->basePath() . '/' . $this->asset('css/styles.css'))
+            ->appendStylesheet('https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css')
+    ?>
 
     <?php
         $this->inlineScript()
@@ -59,6 +61,14 @@
                     &copy; 2013 &mdash; <?= date('Y') ?> by <a href="https://www.zend.com">Zend</a>,
                     a <a href="http://www.roguewave.com/">Rogue Wave Company</a>.
                     <br>All rights reserved.
+                </p>
+
+                <p>
+                    <a href="https://discourse.zendframework.com" class="btn-social" title="Forum"><i class="fa fa-comments"></i></a>
+                    <a href="https://zendframework-slack.herokuapp.com" class="btn-social" title="Slack"><i class="fa fa-slack"></i></a>
+                    <a href="https://github.com/zfcampus" class="btn-social" title="Github"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/apigility" class="btn-social" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://tinyletter.com/mwopzend" class="btn-social" title="Newsletter"><i class="fa fa-envelope"></i></a>
                 </p>
             </div>
 
