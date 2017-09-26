@@ -1,6 +1,6 @@
 # Apigility.org web site
 
-(C) Copyright 2013-2017 Zend Technologies Ltd.
+(C) Copyright 2013-2017 by [Zend](https://www.zend.com/), a [Rogue Wave Company](http://www.roguewave.com/).
 
 ## Docker
 
