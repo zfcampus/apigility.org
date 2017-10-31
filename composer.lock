@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a433af40b4f3cfe4d229d714feffcc90",
+    "content-hash": "d8b2ec53f51ac9ab82852d7f36c46901",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -116,16 +116,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "0.15.6",
+            "version": "0.15.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "91742543c25fecedc84a4883d2919213e04a73b7"
+                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/91742543c25fecedc84a4883d2919213e04a73b7",
-                "reference": "91742543c25fecedc84a4883d2919213e04a73b7",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/36d82f166e441dfa28643f8d01dd8bdd3a579adf",
+                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf",
                 "shasum": ""
             },
             "require": {
@@ -181,7 +181,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2017-08-08T11:47:33+00:00"
+            "time": "2017-10-26T15:41:07+00:00"
         },
         {
             "name": "psr/container",
@@ -627,35 +627,35 @@
         },
         {
             "name": "zendframework/zend-http",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-http.git",
-                "reference": "09f4d279f46d86be63171ff62ee0f79eca878678"
+                "reference": "78aa510c0ea64bfb2aa234f50c4f232c9531acfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-http/zipball/09f4d279f46d86be63171ff62ee0f79eca878678",
-                "reference": "09f4d279f46d86be63171ff62ee0f79eca878678",
+                "url": "https://api.github.com/repos/zendframework/zend-http/zipball/78aa510c0ea64bfb2aa234f50c4f232c9531acfa",
+                "reference": "78aa510c0ea64bfb2aa234f50c4f232c9531acfa",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
-                "zendframework/zend-loader": "^2.5",
-                "zendframework/zend-stdlib": "^2.5 || ^3.0",
-                "zendframework/zend-uri": "^2.5",
-                "zendframework/zend-validator": "^2.5"
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-loader": "^2.5.1",
+                "zendframework/zend-stdlib": "^3.1 || ^2.7.7",
+                "zendframework/zend-uri": "^2.5.2",
+                "zendframework/zend-validator": "^2.10.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit": "^6.4.1 || ^5.7.15",
                 "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-config": "^2.5"
+                "zendframework/zend-config": "^3.1 || ^2.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
                 }
             },
             "autoload": {
@@ -670,10 +670,13 @@
             "description": "provides an easy interface for performing Hyper-Text Transfer Protocol (HTTP) requests",
             "homepage": "https://github.com/zendframework/zend-http",
             "keywords": [
+                "ZendFramework",
                 "http",
-                "zf2"
+                "http client",
+                "zend",
+                "zf"
             ],
-            "time": "2017-01-31T14:41:02+00:00"
+            "time": "2017-10-13T12:06:24+00:00"
         },
         {
             "name": "zendframework/zend-loader",
@@ -1449,16 +1452,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.28",
+            "version": "v0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/google-api-php-client-services.git",
-                "reference": "209421578d76762806087944cf514f1ede6cf7ad"
+                "reference": "297db7f5557dc8beba00a4e824abcaa595382269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/209421578d76762806087944cf514f1ede6cf7ad",
-                "reference": "209421578d76762806087944cf514f1ede6cf7ad",
+                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/297db7f5557dc8beba00a4e824abcaa595382269",
+                "reference": "297db7f5557dc8beba00a4e824abcaa595382269",
                 "shasum": ""
             },
             "require": {
@@ -1482,20 +1485,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2017-09-30T00:22:48+00:00"
+            "time": "2017-10-28T00:23:44+00:00"
         },
         {
             "name": "google/auth",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/google-auth-library-php.git",
-                "reference": "db8e3022a308cb0e988026d38e67b91a42b41622"
+                "reference": "548d27d670f0236dc5258fa4cdde6e7b63464cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-auth-library-php/zipball/db8e3022a308cb0e988026d38e67b91a42b41622",
-                "reference": "db8e3022a308cb0e988026d38e67b91a42b41622",
+                "url": "https://api.github.com/repos/google/google-auth-library-php/zipball/548d27d670f0236dc5258fa4cdde6e7b63464cfd",
+                "reference": "548d27d670f0236dc5258fa4cdde6e7b63464cfd",
                 "shasum": ""
             },
             "require": {
@@ -1512,9 +1515,6 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "src/"
-                ],
                 "psr-4": {
                     "Google\\Auth\\": "src"
                 }
@@ -1530,7 +1530,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2017-07-31T16:34:40+00:00"
+            "time": "2017-10-10T17:01:45+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1793,16 +1793,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "34a7699e6f31b1ef4035ee36444407cecf9f56aa"
+                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/34a7699e6f31b1ef4035ee36444407cecf9f56aa",
-                "reference": "34a7699e6f31b1ef4035ee36444407cecf9f56aa",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
+                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
                 "shasum": ""
             },
             "require": {
@@ -1881,7 +1881,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2017-06-05T06:31:10+00:00"
+            "time": "2017-10-23T05:04:54+00:00"
         },
         {
             "name": "psr/cache",
