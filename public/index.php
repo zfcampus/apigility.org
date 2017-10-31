@@ -10,7 +10,7 @@ if (PHP_SAPI === 'cli-server'
 chdir(dirname(__DIR__));
 require __DIR__ . '/../vendor/autoload.php';
 
-(function() {
+(function () {
     $appConfig = require __DIR__ . '/../config/application.config.php';
     if (file_exists(__DIR__ . '/../config/development.config.php')) {
         $appConfig = \Zend\Stdlib\ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
