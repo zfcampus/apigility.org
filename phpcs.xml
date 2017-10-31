@@ -11,4 +11,15 @@
     <file>public/index.php</file>
     <exclude-pattern>module/Application/view/application/contacts/index.phtml</exclude-pattern>
     <exclude-pattern>module/Application/view/application/video/index.phtml</exclude-pattern>
+
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>bin/install.php</exclude-pattern>
+        <exclude-pattern>config/autoload/global.php</exclude-pattern>
+        <exclude-pattern>module/Application/view/layout/layout.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>bin/install.php</exclude-pattern>
+        <exclude-pattern>bin/install.php.dist</exclude-pattern>
+    </rule>
 </ruleset>
