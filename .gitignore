@@ -1,6 +1,7 @@
 asset/node_modules/
 asset/npm-debug.log
 asset/rev-manifest.json
+config/development.config.php
 data/releases.json
 public/css/*
 public/js/*
