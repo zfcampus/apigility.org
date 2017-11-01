@@ -3,6 +3,8 @@ asset/npm-debug.log
 asset/rev-manifest.json
 config/development.config.php
 data/releases.json
+log/*
+!log/.gitkeep
 public/css/*
 public/js/*
 vendor/
