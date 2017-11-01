@@ -2,8 +2,8 @@
 /**
  * Apigility installer
  *
- * @see http://www.apigility.org
- * (C) 2013-2014 Copyright Zend Technologies Ltd.
+ * @see https://www.apigility.org
+ * (C) 2013-2017 Copyright Zend Technologies Ltd.
  */
 
 $localPath    = __DIR__;

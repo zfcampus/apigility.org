@@ -1,10 +1,28 @@
-Apigility.org web site
-======================
+# Apigility.org web site
 
-(C) Copyright 2013-2016 Zend Technologies Ltd.
+(C) Copyright 2013-2017 by [Zend](https://www.zend.com/), a [Rogue Wave Company](http://www.roguewave.com/).
 
-Creating a new release
-----------------------
+## Docker
+
+For development, we use [docker-compose](https://docs.docker.com/compose/);
+make sure you have both that and Docker installed on your machine.
+
+Build the images:
+
+```console
+$ docker-compose build
+```
+
+And then launch them:
+
+```console
+$ docker-compose up -d
+```
+
+You can then browse to `http://localhost:8080`, and any changes you make in the
+project will be reflected immediately.
+
+## Creating a new release
 
 Use the `Makefile`:
 
@@ -28,33 +46,26 @@ which will update:
 
 Spot-check those, commit, and push.
 
-Updating 3rd Party UI Dependencies
-----------------------------------
+## CSS and JavaScript
 
-We use [Bower](http://bower.io) for managing 3rd party UI dependencies. If you
-need to update or add dependencies, make sure you have installed Bower first.
+CSS can be found in the `asset/sass/` directory (we use SASS for defining our CSS),
+and JS can be found in the `asset/js/` directory.
 
-To add a dependency:
+After changing CSS or JS you need rebuild assets, as following:
 
-```console
-$ bower install <name> -S
+```bash
+$ cd asset
+$ npm install
+$ gulp
 ```
 
-Once installed and integrated, add the new directory under
-`public/bower_components` and the `bower.json` file, and commit.
+New files will be generated in `public/js/` and `public/css/`, and old files will
+be removed. The file `asset/rev-manifest.json` will contain new revision names for
+our assets. The file is used by the [`asset()` view helper](https://docs.zendframework.com/zend-view/helpers/asset/).
 
-To update dependencies:
+The above commands are run automatically when you execute `composer build`.
 
-```console
-$ bower update <name>
-```
-
-As with installing dependencies, after testing the updated version, add the
-updated directory under `public/bower_components` and the `bower.json` file, and
-commit.
-
-Documentation
--------------
+## Documentation
 
 Documentation is written in a separate repository,
 [apigility-documentation](https://github.com/zfcampus/apigility-documentation),
@@ -89,8 +100,7 @@ anything. If it is on any other path, add the following to your
 'pygmentize' => 'path/to/pygmentize'
 ```
 
-Deployment
-----------
+## Deployment
 
 The easiest way to deploy is to use the following:
 
