@@ -1,0 +1,33 @@
+{
+  "name": "apigility.org",
+  "version": "1.0.0",
+  "description": "apigility.org",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zfcampus/apigility.org.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/zfcampus/apigility.org/issues"
+  },
+  "homepage": "https://github.com/zfcampus/apigility.org#readme",
+  "devDependencies": {
+    "anchor-js": "^4.1.0",
+    "es6-promise": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssimport": "^6.0.0",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-delete-original": "^0.2.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "normalize.css": "^7.0.0",
+    "prismjs": "^1.8.1",
+    "rev-del": "^1.0.5"
+  }
+}

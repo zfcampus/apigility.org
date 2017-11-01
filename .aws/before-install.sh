@@ -3,6 +3,11 @@
 # System dependencies
 #######################################################################
 
+# Install needed dependencies
+echo "Updating system dependencies"
+apt-get update
+apt-get install -y nginx php7.0 php7.0-cli php7.0-common php7.0-fpm php7.0-json php7.0-mbstring php7.0-readline php7.0-sqlite3 php7.0-xml php7.0-xsl php7.0-zip nodejs-legacy npm
+
 # Get Composer, and install to /usr/local/bin
 if [ ! -f "/usr/local/bin/composer" ];then
     echo "Installing composer"
@@ -20,6 +25,24 @@ if [ ! -d "/var/cache/composer" ];then
     echo "Creating composer cache directory"
     mkdir -p /var/cache/composer
     chown www-data.www-data /var/cache/composer
+fi
+
+# Install gulp globally
+if [ ! -f "/usr/local/bin/gulp" ];then
+    echo "Installing gulp"
+    npm install -g gulp
+else
+    echo "Updating gulp"
+    npm update -g gulp
+fi
+
+# Ensure we can run npm as www-data
+if [ ! -d "/var/www/.npm" ];then
+    echo "Ensuring www-data may run npm"
+    mkdir -p /var/www/.npm
+    chown www-data.www-data /var/www/.npm
+    chmod o-X /var/www/.npm
+    chmod ug+rwX /var/www/.npm
 fi
 
 echo "[DONE] before-install.sh"
