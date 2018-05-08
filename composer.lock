@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "d8b2ec53f51ac9ab82852d7f36c46901",
@@ -1297,12 +1297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "e35be2a12af6203ed44621bad21f962027bc920f"
+                "reference": "5123f614bc31811fdad504771affc92223d4e0d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/e35be2a12af6203ed44621bad21f962027bc920f",
-                "reference": "e35be2a12af6203ed44621bad21f962027bc920f",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/5123f614bc31811fdad504771affc92223d4e0d6",
+                "reference": "5123f614bc31811fdad504771affc92223d4e0d6",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2016-10-12T15:23:27+00:00"
+            "time": "2018-05-08T16:28:47+00:00"
         }
     ],
     "packages-dev": [

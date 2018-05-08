@@ -47,7 +47,7 @@
     "scripts": {
         "build": [
             "composer update zfcampus/apigility-documentation",
-            "php ./bin/get-releases.php",
+            "@php ./bin/get-releases.php",
             "cd asset && npm install --no-save && gulp && rm -Rf node_modules",
             "rm -f data/cache/module-classmap-cache.php",
             "rm -f data/cache/module-config-cache.php"
