@@ -6,7 +6,7 @@
 # Install needed dependencies
 echo "Updating system dependencies"
 apt-get update
-apt-get install -y nginx php7.1 php7.1-cli php7.1-common php7.1-fpm php7.1-curl php7.1-json php7.1-mbstring php7.1-readline php7.1-sqlite3 php7.1-xml php7.1-xsl php7.1-zip nodejs-legacy npm
+apt-get install -y nginx php7.2 php7.2-cli php7.2-common php7.2-fpm php7.2-curl php7.2-json php7.2-mbstring php7.2-readline php7.2-sqlite3 php7.2-xml php7.2-xsl php7.2-zip nodejs-legacy npm
 
 # Get Composer, and install to /usr/local/bin
 if [ ! -f "/usr/local/bin/composer" ];then
