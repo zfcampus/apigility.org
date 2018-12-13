@@ -6,14 +6,16 @@
 # - PHP - PHP executable to use, if not in path
 # - AG_VERSION - Apiglity version being released or added to site; required for
 #   all but homepage target
+# - YT_KEY - YouTube API key to use when generating the video page
 #
 # Available targets:
 # - release - indicate a new Apigility release
 # - videos  = update video page wtih latest YouTube video releases
 # - all     - currently, synonym for release target
 
-PHP ?= /usr/local/zend/bin/php
+PHP ?= $(/usr/bin/env php)
 AG_VERSION ?= false
+YT_KEY=
 
 BIN = $(CURDIR)/bin
 
