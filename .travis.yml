@@ -1,0 +1,24 @@
+sudo: false
+
+language: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.2
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source --no-scripts
+
+script:
+  - composer cs-check
+
+after_success:
+  - .deploy/travis_deploy.sh $DEPLOY_TOKEN $SITE_NAME $TRAVIS_COMMIT
+
+notifications:
+  email: true
