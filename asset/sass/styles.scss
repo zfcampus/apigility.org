@@ -1148,3 +1148,16 @@ section.manual img {
     font-style: italic;
     font-weight: bold;
 }
+
+#laminasBanner {
+    padding: 8px 0 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #043755;
+    font-size: 1.125rem;
+
+    a {
+        text-decoration: underline;
+        color: #ffffff;
+    }
+}
