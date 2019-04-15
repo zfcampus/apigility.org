@@ -13,6 +13,7 @@ var gulp = require('gulp'),
         'markup',
         'css',
         'clike',
+        'markup-templating',
         'javascript',
         'apacheconf',
         'bash',
@@ -46,12 +47,12 @@ var gulp = require('gulp'),
 gulp.task('scripts', function () {
     var prismComponents = [];
     for (var component in prism) {
-        prismComponents[component] = 'node_modules/prismjs/components/prism-' + prism[component] + '.min.js';
+        prismComponents[component] = 'node_modules/prismjs/components/prism-' + prism[component] + '.js';
     }
 
     return gulp.src(prismComponents.concat([
-            'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js',
-            'node_modules/anchor-js/anchor.min.js',
+            'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js',
+            'node_modules/anchor-js/anchor.js',
             'js/manual-toc.js',
             'js/scripts.js'
         ]))

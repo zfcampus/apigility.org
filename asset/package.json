@@ -17,17 +17,17 @@
   },
   "homepage": "https://github.com/zfcampus/apigility.org#readme",
   "devDependencies": {
-    "anchor-js": "^4.1.0",
-    "es6-promise": "^4.1.1",
+    "anchor-js": "^4.2.0",
+    "es6-promise": "^4.2.6",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-cssimport": "^6.0.0",
-    "gulp-rev": "^8.0.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "normalize.css": "^7.0.0",
-    "prismjs": "^1.8.1",
-    "rev-del": "^1.0.5"
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.16.0",
+    "rev-del": "^2.0.0"
   }
 }
