@@ -405,6 +405,7 @@
                 "markdown",
                 "table"
             ],
+            "abandoned": "league/commonmark-ext-table",
             "time": "2017-01-11T14:52:17+00:00"
         },
         {
@@ -1297,12 +1298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zfcampus/apigility-documentation.git",
-                "reference": "0b56b61753c8b7375b059ba505c0de5a61b64094"
+                "reference": "f4d8240dc4cc6c891afac26a194017ad556ea1e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/0b56b61753c8b7375b059ba505c0de5a61b64094",
-                "reference": "0b56b61753c8b7375b059ba505c0de5a61b64094",
+                "url": "https://api.github.com/repos/zfcampus/apigility-documentation/zipball/f4d8240dc4cc6c891afac26a194017ad556ea1e7",
+                "reference": "f4d8240dc4cc6c891afac26a194017ad556ea1e7",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1342,7 @@
                 "source": "https://github.com/zfcampus/apigility-documentation",
                 "issues": "https://github.com/zfcampus/apigility-documentation/issues"
             },
-            "time": "2019-01-23T17:14:33+00:00"
+            "time": "2019-10-22T07:46:09+00:00"
         }
     ],
     "packages-dev": [
