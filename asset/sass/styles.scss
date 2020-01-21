@@ -1161,3 +1161,25 @@ section.manual img {
         color: #ffffff;
     }
 }
+
+.hidden {
+    display: none;
+}
+
+#cookie-banner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-height: 2.5em;
+    width: 100%;
+    padding: 12px 0 8px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3d3d3d;
+    font-size: 1.125rem;
+
+    a {
+        text-decoration: underline;
+        color: #ffffff;
+    }
+}

@@ -15,16 +15,22 @@
             ])
             ->appendStylesheet($this->basePath() . '/' . $this->asset('css/styles.css'))
             ->appendStylesheet('https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css')
+            ->appendStylesheet('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/PNotifyBrightTheme.css')
+            ->appendStylesheet('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css')
     ?>
 
     <?php
         $this->inlineScript()
             ->prependFile($this->basePath('/') . $this->asset('js/scripts.js'))
-            ->prependFile('https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js');
+            ->prependFile('https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotify.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyAnimate.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyButtons.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyCallbacks.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyCompat.js')
     ?>
 </head>
 <body class="wrap">
-    <div id="laminasBanner">Zend Framework transitions to the Linux Foundation. <a href="https://getlaminas.org">Learn More.</a></div>
     <header>
         <nav class="mobile-nav only-on-mobiles">
             <?= $this->navigation('navigation')->menu()->setPartial('layout/menu'); ?>
@@ -51,17 +57,16 @@
         <div class="grid">
             <div class="unit half center-on-mobiles">
                 <p>
-                    &copy; 2013 &mdash; <?= date('Y') ?> by <a href="https://www.zend.com">Zend</a>,
-                    a <a href="http://www.roguewave.com/">Rogue Wave Company</a>.
+                    &copy; 2013 &mdash; <?= date('Y') ?> by <a href="https://www.zend.com">Zend</a>
+                    by <a href="https://www.perforce.com/">Perforce</a>.
                     <br>All rights reserved.
                 </p>
 
                 <p>
-                    <a href="https://discourse.zendframework.com" class="btn-social" title="Forum"><i class="fa fa-comments"></i></a>
-                    <a href="https://zendframework-slack.herokuapp.com" class="btn-social" title="Slack"><i class="fa fa-slack"></i></a>
+                    <a href="https://discourse.laminas.dev" class="btn-social" title="Forum"><i class="fa fa-comments"></i></a>
+                    <a href="https://laminas.dev/chat" class="btn-social" title="Slack"><i class="fa fa-slack"></i></a>
                     <a href="https://github.com/zfcampus" class="btn-social" title="Github"><i class="fa fa-github"></i></a>
                     <a href="https://twitter.com/apigility" class="btn-social" title="Twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="https://tinyletter.com/mwopzend" class="btn-social" title="Newsletter"><i class="fa fa-envelope"></i></a>
                 </p>
             </div>
 
@@ -74,6 +79,10 @@
         </div>
     </footer>
 
+    <div id="cookie-banner" class="hidden">
+        This site uses cookies to allow you to dismiss dialogs. <a href="#" id="cookie-button">Allow Cookies</a>
+    </div>
+
     <?= $this->inlineScript() ?>
 
     <script>
@@ -85,6 +94,67 @@
       ga('create', 'UA-49458222-1', 'apigility.org');
       ga('send', 'pageview');
     </script>
-    <script src="//my.hellobar.com/73115e27ed23189136215b755a6ce835623e014d.js" type="text/javascript" charset="utf-8" async="async"></script>
+    <script type="text/javascript">
+        (function () {
+            const createCookie = function (name, days) {
+                if (name !== 'ALLOW_COOKIES' && ! getCookie('ALLOW_COOKIES')) {
+                    return;
+                }
+                const expires = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * days);
+                const cookie = name + "=1;expires=" + expires.toGMTString() + ";";
+                document.cookie = cookie;
+            };
+
+            const getCookie = function (name) {
+                const re = new RegExp('(?:^|;\\s*)' + name + '=(.*?)(?:;|$)', 'g');
+                const result = re.exec(document.cookie);
+                return (result === null) ? null : result[1];
+            };
+
+            const showNotice = function () {
+                if (getCookie('LAMINAS_NOTIFIER') !== null) {
+                    return;
+                }
+
+                const text = 'Apigility is now <a href="https://api-tools.getlaminas.org"><strong>Laminas API Tools</strong></a>. Please update your bookmarks.<br /><br /><small>(Unless you accept cookies, this notice will appear on every page.)</small>';
+
+                const notice = PNotify.notice({
+                    title: "We've moved!",
+                    text: text,
+                    textTrusted: true,
+                    hide: false,
+                    modules: {
+                        Animate: {
+                            animate: true,
+                            inClass: "swing",
+                            outClass: "fadeOutUp",
+                        },
+                        Buttons: {
+                            closer: false,
+                            sticker: false
+                        }
+                    }
+                });
+                notice.on('click', function () {
+                    createCookie('LAMINAS_NOTIFIER', 7);
+                    notice.close();
+                });
+            };
+
+            const showCookieBar = function () {
+                if (getCookie('ALLOW_COOKIES')) {
+                    return;
+                }
+                $('#cookie-banner').removeClass('hidden');
+                $('#cookie-button').click(function () {
+                    createCookie('ALLOW_COOKIES', 90);
+                    $('#cookie-banner').addClass('hidden');
+                });
+            };
+
+            showCookieBar();
+            showNotice();
+        })();
+    </script>
 </body>
 </html>
